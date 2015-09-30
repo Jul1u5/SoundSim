@@ -1,0 +1,562 @@
+\hypertarget{soundwavefunction_8c}{}\section{soundwavefunction.\+c File Reference}
+\label{soundwavefunction_8c}\index{soundwavefunction.\+c@{soundwavefunction.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soundwavefunction.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{soundwavefunction_8c_a8c8a4d258541b6f3d944fe6ac851407a}{increase\+Movement} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{soundwavefunction_8c_ab5fc8d378c483aef68f0cd2b4db31ad6}{get\+Movement} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_a0e8487e51620b033d353431473ca58a8}{set\+Movement} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int m)
+\item 
+void \hyperlink{soundwavefunction_8c_a1bde60066f55f47540b4332908d02346}{copy\+Movement} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, \hyperlink{structitem__node}{item\+\_\+node} $\ast$newnode)
+\item 
+void \hyperlink{soundwavefunction_8c_a488f1ab7dfa65b29da446b74c5d01131}{set\+Wave\+Root} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, \hyperlink{structitem__node}{item\+\_\+node} $\ast$rootnode)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{soundwavefunction_8c_ac0d955cec06c4dc262cc6ecb76cc824c}{get\+Wave\+Root} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_a66014ff391a85db23aa68d59959ff637}{set\+Touche} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_aa974ab069203cf97f4c27e038116ad83}{un\+Touche} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_a8da78980e10b6f5a5ef1a307b48db7eb}{un\+Touche\+All} ()
+\item 
+bool \hyperlink{soundwavefunction_8c_a9b607c2ca6ed85efdb0e82ff6fc04a8d}{get\+Touch} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_a67803c5c5a960e3398d12758e6bfac71}{dec\+Sound\+With\+Movement} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_ab7f82602facfc90160970113fc0c7487}{set\+Side\+Of\+Wave} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int side)
+\item 
+int \hyperlink{soundwavefunction_8c_ae5fedcb660edb7a1b06a08eabc2e3293}{get\+Side\+Of\+Wave} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_a89db532fc7a1c1bd44295a1e37ec5334}{change\+Rebound\+Side\+Of\+Wave} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{soundwavefunction_8c_aa62919f1eb507d6ea9aa0102ff333709}{set\+Freq\+All} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, \hyperlink{structitem__node}{item\+\_\+node} $\ast$newnode)
+\item 
+void \hyperlink{soundwavefunction_8c_a623c8ed4c33ac080eb69f0d66264bb0e}{procedureH} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$temp, int x, int y, int z, int side)
+\item 
+void \hyperlink{soundwavefunction_8c_aac2e1ee80ba5ccc043b9b61a3dc53472}{procedure} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$temp, int x, int y, int z, int side)
+\item 
+void \hyperlink{soundwavefunction_8c_ac06a60c5222931d53dd6d67c0655a77d}{add\+Wave} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$temp, int x, int y, int z)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{soundwavefunction_8c_a37d972ae0b47b9099e30983131d31916}{j}
+\item 
+int \hyperlink{soundwavefunction_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}
+\item 
+int \hyperlink{soundwavefunction_8c_a89606eca6b563ec68d2da2e84657736f}{l}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!add\+Wave@{add\+Wave}}
+\index{add\+Wave@{add\+Wave}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{add\+Wave(item\+\_\+node $\ast$temp, int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Wave (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{temp, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_ac06a60c5222931d53dd6d67c0655a77d}{}\label{soundwavefunction_8c_ac06a60c5222931d53dd6d67c0655a77d}
+Welle eines Sound\+Item wird erzeugt addwave lässt die Welle bis zu einer bestimmten Verschiebungsweite ungekrümmt, danach werden die resultierenden Teilchen \char`\"{}\+Kugelfunktionsartig\char`\"{} erzeugt und haben eine zugehörgkeit zur rechten oder linken Seite. 
+\begin{DoxyParams}{Parameters}
+{\em temp} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 274 of file soundwavefunction.\+c.
+
+
+
+References get\+Direction\+I\+D(), get\+Item\+I\+D(), get\+Movement(), get\+Side\+Of\+Wave(), is\+Sound\+Field(), procedure(), procedure\+H(), and set\+Touche().
+
+
+
+Referenced by main().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!change\+Rebound\+Side\+Of\+Wave@{change\+Rebound\+Side\+Of\+Wave}}
+\index{change\+Rebound\+Side\+Of\+Wave@{change\+Rebound\+Side\+Of\+Wave}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{change\+Rebound\+Side\+Of\+Wave(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void change\+Rebound\+Side\+Of\+Wave (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a89db532fc7a1c1bd44295a1e37ec5334}{}\label{soundwavefunction_8c_a89db532fc7a1c1bd44295a1e37ec5334}
+Ähnlich wie Rebound der Teilchen. Seitenzugehörigkeit wird verändert 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 182 of file soundwavefunction.\+c.
+
+
+
+References get\+Side\+Of\+Wave(), and set\+Side\+Of\+Wave().
+
+
+
+Referenced by main().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!copy\+Movement@{copy\+Movement}}
+\index{copy\+Movement@{copy\+Movement}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{copy\+Movement(item\+\_\+node $\ast$node, item\+\_\+node $\ast$newnode)}]{\setlength{\rightskip}{0pt plus 5cm}void copy\+Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{{\bf item\+\_\+node} $\ast$}]{newnode}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a1bde60066f55f47540b4332908d02346}{}\label{soundwavefunction_8c_a1bde60066f55f47540b4332908d02346}
+Kopiert das Movement von einem Item zum anderen 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em newnode} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file soundwavefunction.\+c.
+
+
+
+References get\+Item\+I\+D(), get\+Movement(), and set\+Movement().
+
+
+
+Referenced by procedure(), and procedure\+H().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!dec\+Sound\+With\+Movement@{dec\+Sound\+With\+Movement}}
+\index{dec\+Sound\+With\+Movement@{dec\+Sound\+With\+Movement}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{dec\+Sound\+With\+Movement(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void dec\+Sound\+With\+Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a67803c5c5a960e3398d12758e6bfac71}{}\label{soundwavefunction_8c_a67803c5c5a960e3398d12758e6bfac71}
+Verringert die Frequenzen während des Movements 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file soundwavefunction.\+c.
+
+
+
+References get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), get\+Item\+I\+D(), get\+Movement(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), and set\+Freq6000b10000().
+
+
+
+Referenced by main().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!get\+Movement@{get\+Movement}}
+\index{get\+Movement@{get\+Movement}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{get\+Movement(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_ab5fc8d378c483aef68f0cd2b4db31ad6}{}\label{soundwavefunction_8c_ab5fc8d378c483aef68f0cd2b4db31ad6}
+Getter für Movement 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 23 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by add\+Wave(), copy\+Movement(), dec\+Sound\+With\+Movement(), and prepare\+Arrays().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!get\+Side\+Of\+Wave@{get\+Side\+Of\+Wave}}
+\index{get\+Side\+Of\+Wave@{get\+Side\+Of\+Wave}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{get\+Side\+Of\+Wave(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Side\+Of\+Wave (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_ae5fedcb660edb7a1b06a08eabc2e3293}{}\label{soundwavefunction_8c_ae5fedcb660edb7a1b06a08eabc2e3293}
+Getter für die Seite der Welle 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 171 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by add\+Wave(), change\+Rebound\+Side\+Of\+Wave(), interference(), and prepare\+Arrays().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!get\+Touch@{get\+Touch}}
+\index{get\+Touch@{get\+Touch}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{get\+Touch(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Touch (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a9b607c2ca6ed85efdb0e82ff6fc04a8d}{}\label{soundwavefunction_8c_a9b607c2ca6ed85efdb0e82ff6fc04a8d}
+Getter für Touched Status 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 109 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by main(), and prepare\+Arrays().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!get\+Wave\+Root@{get\+Wave\+Root}}
+\index{get\+Wave\+Root@{get\+Wave\+Root}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{get\+Wave\+Root(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ get\+Wave\+Root (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_ac0d955cec06c4dc262cc6ecb76cc824c}{}\label{soundwavefunction_8c_ac0d955cec06c4dc262cc6ecb76cc824c}
+
+
+Definition at line 57 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by interference().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!increase\+Movement@{increase\+Movement}}
+\index{increase\+Movement@{increase\+Movement}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{increase\+Movement(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void increase\+Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a8c8a4d258541b6f3d944fe6ac851407a}{}\label{soundwavefunction_8c_a8c8a4d258541b6f3d944fe6ac851407a}
+Erhöhung des Movements 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by main().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!procedure@{procedure}}
+\index{procedure@{procedure}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{procedure(item\+\_\+node $\ast$temp, int x, int y, int z, int side)}]{\setlength{\rightskip}{0pt plus 5cm}void procedure (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{temp, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_aac2e1ee80ba5ccc043b9b61a3dc53472}{}\label{soundwavefunction_8c_aac2e1ee80ba5ccc043b9b61a3dc53472}
+Zeugs 2 \+:D 
+\begin{DoxyParams}{Parameters}
+{\em temp} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em side} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 253 of file soundwavefunction.\+c.
+
+
+
+References add\+Item\+New\+Room(), copy\+Movement(), create\+Item(), get\+Direction\+I\+D(), set\+Direction\+I\+D(), set\+Freq\+All(), set\+Side\+Of\+Wave(), and set\+Touche().
+
+
+
+Referenced by add\+Wave().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!procedureH@{procedureH}}
+\index{procedureH@{procedureH}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{procedure\+H(item\+\_\+node $\ast$temp, int x, int y, int z, int side)}]{\setlength{\rightskip}{0pt plus 5cm}void procedureH (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{temp, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a623c8ed4c33ac080eb69f0d66264bb0e}{}\label{soundwavefunction_8c_a623c8ed4c33ac080eb69f0d66264bb0e}
+Zeugs 
+\begin{DoxyParams}{Parameters}
+{\em temp} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em side} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 232 of file soundwavefunction.\+c.
+
+
+
+References add\+Item\+New\+Room(), copy\+Movement(), create\+Item(), get\+Direction\+I\+D(), set\+Direction\+I\+D(), set\+Freq\+All(), set\+Side\+Of\+Wave(), set\+Touche(), and set\+Wave\+Root().
+
+
+
+Referenced by add\+Wave().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!set\+Freq\+All@{set\+Freq\+All}}
+\index{set\+Freq\+All@{set\+Freq\+All}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{set\+Freq\+All(item\+\_\+node $\ast$node, item\+\_\+node $\ast$newnode)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq\+All (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{{\bf item\+\_\+node} $\ast$}]{newnode}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_aa62919f1eb507d6ea9aa0102ff333709}{}\label{soundwavefunction_8c_aa62919f1eb507d6ea9aa0102ff333709}
+Frequenzen eines Teilchen wird von anderem Teilchen übernommen und um einen Faktor reduziert 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em newnode} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file soundwavefunction.\+c.
+
+
+
+References get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), and set\+Freq6000b10000().
+
+
+
+Referenced by procedure(), and procedure\+H().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!set\+Movement@{set\+Movement}}
+\index{set\+Movement@{set\+Movement}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{set\+Movement(item\+\_\+node $\ast$node, int m)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a0e8487e51620b033d353431473ca58a8}{}\label{soundwavefunction_8c_a0e8487e51620b033d353431473ca58a8}
+Setter für Movement 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by copy\+Movement(), create\+Item(), and create\+Receipt().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!set\+Side\+Of\+Wave@{set\+Side\+Of\+Wave}}
+\index{set\+Side\+Of\+Wave@{set\+Side\+Of\+Wave}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{set\+Side\+Of\+Wave(item\+\_\+node $\ast$node, int side)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Side\+Of\+Wave (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_ab7f82602facfc90160970113fc0c7487}{}\label{soundwavefunction_8c_ab7f82602facfc90160970113fc0c7487}
+Legt die Seite der Welle für ein Sound\+Item fest 
+\begin{DoxyParams}{Parameters}
+{\em node} & betroffenes Item \\
+\hline
+{\em side} & Seite der \char`\"{}\+Welle\char`\"{} 0 = nicht von betroffen , 1 == Links , 2 = Rechts, 3 = Oben, 4 = Unten \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 161 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by change\+Rebound\+Side\+Of\+Wave(), create\+Receipt(), interference(), loudspeaker(), main(), procedure(), and procedure\+H().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!set\+Touche@{set\+Touche}}
+\index{set\+Touche@{set\+Touche}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{set\+Touche(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Touche (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a66014ff391a85db23aa68d59959ff637}{}\label{soundwavefunction_8c_a66014ff391a85db23aa68d59959ff637}
+Touched Element... 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by add\+Wave(), create\+Receipt(), procedure(), and procedure\+H().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!set\+Wave\+Root@{set\+Wave\+Root}}
+\index{set\+Wave\+Root@{set\+Wave\+Root}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{set\+Wave\+Root(item\+\_\+node $\ast$node, item\+\_\+node $\ast$rootnode)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Wave\+Root (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{{\bf item\+\_\+node} $\ast$}]{rootnode}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a488f1ab7dfa65b29da446b74c5d01131}{}\label{soundwavefunction_8c_a488f1ab7dfa65b29da446b74c5d01131}
+
+
+Definition at line 51 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by interference(), and procedure\+H().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!un\+Touche@{un\+Touche}}
+\index{un\+Touche@{un\+Touche}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{un\+Touche(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void un\+Touche (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_aa974ab069203cf97f4c27e038116ad83}{}\label{soundwavefunction_8c_aa974ab069203cf97f4c27e038116ad83}
+Untouched Element... 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file soundwavefunction.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by un\+Touche\+All().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!un\+Touche\+All@{un\+Touche\+All}}
+\index{un\+Touche\+All@{un\+Touche\+All}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{un\+Touche\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void un\+Touche\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{soundwavefunction_8c_a8da78980e10b6f5a5ef1a307b48db7eb}{}\label{soundwavefunction_8c_a8da78980e10b6f5a5ef1a307b48db7eb}
+Untouched alle Elemente 
+
+Definition at line 87 of file soundwavefunction.\+c.
+
+
+
+References get\+Item\+\_\+\+Root(), get\+Item\+I\+D(), i, j, k, item\+\_\+node\+::next, un\+Touche(), x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Variable Documentation}
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!j@{j}}
+\index{j@{j}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}int j}\hypertarget{soundwavefunction_8c_a37d972ae0b47b9099e30983131d31916}{}\label{soundwavefunction_8c_a37d972ae0b47b9099e30983131d31916}
+
+
+Definition at line 7 of file soundwavefunction.\+c.
+
+
+
+Referenced by un\+Touche\+All().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!k@{k}}
+\index{k@{k}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}int k}\hypertarget{soundwavefunction_8c_ab66ed8e0098c0a86b458672a55a9cca9}{}\label{soundwavefunction_8c_ab66ed8e0098c0a86b458672a55a9cca9}
+
+
+Definition at line 7 of file soundwavefunction.\+c.
+
+
+
+Referenced by un\+Touche\+All().
+
+\index{soundwavefunction.\+c@{soundwavefunction.\+c}!l@{l}}
+\index{l@{l}!soundwavefunction.\+c@{soundwavefunction.\+c}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}int l}\hypertarget{soundwavefunction_8c_a89606eca6b563ec68d2da2e84657736f}{}\label{soundwavefunction_8c_a89606eca6b563ec68d2da2e84657736f}
+
+
+Definition at line 7 of file soundwavefunction.\+c.
+

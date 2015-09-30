@@ -1,0 +1,1412 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soundwavefunction.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}extras.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$mpi.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{main_8c_a5c4808c9fbac3192870ff6282aca4c89}{create\+Room} ()
+\item 
+void \hyperlink{main_8c_aefd8e46b9a3d9e95a4228c0ea90889fb}{alloc\+Room} ()
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{main_8c_a2f527d4fd45c2271db450e5a7398af47}{create\+Room\+New} ()
+\item 
+void \hyperlink{main_8c_ac1a3423e2e6f2347f2b474095da790a5}{change\+Room} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$new\+Room)
+\item 
+int \hyperlink{main_8c_a52de69fe99722b80280b0afb342fb708}{get\+Item\+ID} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{main_8c_a3d564fcebf7f5265fe47f6ef42395926}{set\+Item\+ID} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int id)
+\item 
+int \hyperlink{main_8c_a3788a71fbf04082421f41a9796392e0e}{get\+Field\+ID} (int x, int y, int z)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} \hyperlink{main_8c_af9c2abce0ffcce2e850cb3fef1bcfedd}{get\+Room} ()
+\item 
+bool \hyperlink{main_8c_a37810a2fcc0ad1bbe5b7cb3592e3937c}{is\+Obstacle} (int x, int y, int z)
+\item 
+void \hyperlink{main_8c_ab67ac21a87bc2171acdd00325c472b45}{set\+Freq20b40} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a664d9e2a80d231f5d2f7cc743ac569b9}{set\+Freq40b100} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a3fc5252da5fa59cc06c27a2b00cdf25d}{set\+Freq100b150} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a7739fd842413604af4e994f32058a522}{set\+Freq150b400} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a688f1351221f37c367b16f5f70911322}{set\+Freq400b1000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a8d9defcd316948edb0fff018534d1495}{set\+Freq1000b2000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_ac8e10f267af03986af2f4c0304ec05f7}{set\+Freq2000b3500} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_ab4e4ecc4073ab36e0695d847f7742554}{set\+Freq3500b6000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_a97823b348f21cfc3fc827f1c8fc6bffb}{set\+Freq6000b10000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+void \hyperlink{main_8c_ac06ab01dbd802f42ca6d4ebd28d35202}{set\+Freq10000b20000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+int \hyperlink{main_8c_a034b08dd02197f0c7ca56141b0b2a387}{get\+Freq20b40} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a7f23d6ca252b6940a0c8731a60f42547}{get\+Freq40b100} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a31fc6a66cd556136a8c6e06659d8d144}{get\+Freq100b150} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a39ebd0a811e55b6a28bec6f1070c31b5}{get\+Freq150b400} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a57b2c8d487852f6f4c40b41c8a12e463}{get\+Freq400b1000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a8d03fb2e8fcc4f09bf538fb99178e2bd}{get\+Freq1000b2000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a40b43edfd6b7e6517ba22cee0219915d}{get\+Freq2000b3500} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a810a26db40d1406444f91c83d7af9271}{get\+Freq3500b6000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_a5afd095070568de0f9c06bd7433ac5c2}{get\+Freq6000b10000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_ae734388e3227c3fb1dd199ed7de5965d}{get\+Freq10000b20000} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+void \hyperlink{main_8c_ac114174872932c0582011ec32127173d}{set\+Direction\+ID} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int value)
+\item 
+int \hyperlink{main_8c_ae0af5bf1e046c80aa9918b4a683a9939}{get\+Direction\+ID} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+int \hyperlink{main_8c_abf4367fb88386f1b3d7b5512068dacc6}{get\+Rebound\+ID} (int current\+Direction\+ID)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} \hyperlink{main_8c_a86b3b843fb0ebc9240e32a0fc3fb59e4}{get\+Sound} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} \hyperlink{main_8c_abf0dfee4f51743bb88bdc24f2938ffa8}{get\+Obstacle} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_a777eb4341c9a5daf4e35632fcc158a73}{get\+Item\+\_\+\+Root} (int x, int y, int z)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_ade0675b03dfdd45cdf583457749c9a6e}{create\+Item} (int x, int y, int z, int id)
+\item 
+void \hyperlink{main_8c_a43e87e5a2e29cf0b7d2d2f25d4a81cad}{remove\+Item} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_adf9e9026620312a076e833e3c37e307f}{add\+Item} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int x, int y, int z)
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_a28f9d70d5d844acbfcd87257c36afdaa}{get\+Item\+\_\+\+Root\+New\+Room} (int x, int y, int z)
+\item 
+void \hyperlink{main_8c_af9b4d60cca1273a51e9a60f009bf2ee5}{add\+Item\+New\+Room} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int x, int y, int z)
+\item 
+int \hyperlink{main_8c_a9de2c42683a9c479f5a402991667eae1}{is\+Sound\+Field} (int x, int y, int z)
+\item 
+void \hyperlink{main_8c_ab86e3577e272f1c7fe704ece65a4214c}{create\+Receipt} (int($\ast$\hyperlink{main_8c_a884a7ee2f75fca9f3e725eeef3469816}{roomtrans})\mbox{[}\hyperlink{main_8c_a4407a60bc4387adae24cee658711f2d9}{cols}\mbox{]}, int var, int x)
+\item 
+int $\ast$ \hyperlink{main_8c_a3789f2d2d6ef04b19dcf398cdd8daccb}{prepare\+Arrays} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int side)
+\item 
+void \hyperlink{main_8c_a2d8b0955d6cadb0b58cf3e73c303d8b3}{save\+Visualisation} (int x\+\_\+offset)
+\item 
+void \hyperlink{main_8c_aecc7d8debf54990ffeaaed5bac7d7d81}{startup} ()
+\item 
+void \hyperlink{main_8c_a7861ee1569802186a619778efc85af13}{shutdown} ()
+\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_ab2756720193d676d235685da669031e1}{visu\+Step} = 1
+\begin{DoxyCompactList}\small\item\em Step Counter für Visualisierung. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a8017a0912da3ec358c0eaca7631a8800}{x\+\_\+format}
+\begin{DoxyCompactList}\small\item\em Raum Formate. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_adf8acfcac589366a63f10a845934becb}{y\+\_\+format}
+\item 
+int \hyperlink{main_8c_a52fa078cf5f7807fd75db3b98b40c5d9}{z\+\_\+format}
+\item 
+int \hyperlink{main_8c_a37d972ae0b47b9099e30983131d31916}{j}
+\item 
+int \hyperlink{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}
+\item 
+int \hyperlink{main_8c_a89606eca6b563ec68d2da2e84657736f}{l}
+\item 
+int \hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\item 
+int \hyperlink{main_8c_aa8a2431e50f9fc7d8c78af300d5f3bee}{myrank}
+\item 
+int \hyperlink{main_8c_a439227feff9d7f55384e8780cfc2eb82}{size}
+\item 
+const int \hyperlink{main_8c_a98cba48c4f1ace052b64a61a94f0e92f}{nitems} = 18
+\item 
+int \hyperlink{main_8c_a061459acc9e078fa4699e0e349887215}{rows} = 5
+\item 
+int \hyperlink{main_8c_a5c256f6c213bfe3415606e20255587bc}{realcountright} = 0
+\item 
+int \hyperlink{main_8c_ac698d487bf9304eb9849332a74ba35f7}{realcountleft} = 0
+\item 
+int \hyperlink{main_8c_a4407a60bc4387adae24cee658711f2d9}{cols} = 18
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_a884a7ee2f75fca9f3e725eeef3469816}{roomtrans}
+\begin{DoxyCompactList}\small\item\em Modelierung eines Fragments ! \end{DoxyCompactList}\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{main_8c_a98e34cb6a162e2ff9c62fa441fc11afd}{room}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{main_8c_a41abff2b75fa6027ab5e24ef7a59bfac}{room\+\_\+new}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_ade4e9da124d874698c17e544dc1a81ca}{all\+Elements\+New} = N\+U\+LL
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{main_8c_af7f888ab478246c722214922898f210c}{all\+Elements} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!add\+Item@{add\+Item}}
+\index{add\+Item@{add\+Item}!main.\+c@{main.\+c}}
+\subsubsection[{add\+Item(item\+\_\+node $\ast$node, int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ add\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_adf9e9026620312a076e833e3c37e307f}{}\label{main_8c_adf9e9026620312a076e833e3c37e307f}
+Fügt ein Element an eine neue Stelle (Eigenschaften bleiben erhalten), Element an der alten Position wird entfernt 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 556 of file main.\+c.
+
+
+
+References get\+Item\+\_\+\+Root(), get\+Item\+I\+D(), item\+\_\+node\+::next, item\+\_\+node\+::prev, and remove\+Item().
+
+\index{main.\+c@{main.\+c}!add\+Item\+New\+Room@{add\+Item\+New\+Room}}
+\index{add\+Item\+New\+Room@{add\+Item\+New\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{add\+Item\+New\+Room(item\+\_\+node $\ast$node, int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Item\+New\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_af9b4d60cca1273a51e9a60f009bf2ee5}{}\label{main_8c_af9b4d60cca1273a51e9a60f009bf2ee5}
+Fügt ein Element an eine neue Stelle in new\+\_\+room (Eigenschaften bleiben erhalten), Element an der alten Position wird entfernt 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 599 of file main.\+c.
+
+
+
+References get\+Item\+\_\+\+Root\+New\+Room(), get\+Item\+I\+D(), item\+\_\+node\+::next, item\+\_\+node\+::prev, and remove\+Item().
+
+
+
+Referenced by main(), procedure(), and procedure\+H().
+
+\index{main.\+c@{main.\+c}!alloc\+Room@{alloc\+Room}}
+\index{alloc\+Room@{alloc\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{alloc\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}void alloc\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aefd8e46b9a3d9e95a4228c0ea90889fb}{}\label{main_8c_aefd8e46b9a3d9e95a4228c0ea90889fb}
+Allocation Test 
+
+Definition at line 77 of file main.\+c.
+
+
+
+References i, j, x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+\index{main.\+c@{main.\+c}!change\+Room@{change\+Room}}
+\index{change\+Room@{change\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{change\+Room(item\+\_\+node $\ast$$\ast$$\ast$new\+Room)}]{\setlength{\rightskip}{0pt plus 5cm}void change\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$$\ast$$\ast$}]{new\+Room}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ac1a3423e2e6f2347f2b474095da790a5}{}\label{main_8c_ac1a3423e2e6f2347f2b474095da790a5}
+Raum wird gewechselt. Der Alte wird geleert. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Room} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 173 of file main.\+c.
+
+
+
+References all\+Elements\+New, i, and x\+\_\+format.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!create\+Item@{create\+Item}}
+\index{create\+Item@{create\+Item}!main.\+c@{main.\+c}}
+\subsubsection[{create\+Item(int x, int y, int z, int id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ create\+Item (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ade0675b03dfdd45cdf583457749c9a6e}{}\label{main_8c_ade0675b03dfdd45cdf583457749c9a6e}
+Erzeugt ein neues Item mit einer bestimmten ID 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 487 of file main.\+c.
+
+
+
+References get\+Item\+\_\+\+Root(), get\+Item\+I\+D(), item\+\_\+node\+::id, item\+\_\+node\+::next, item\+\_\+node\+::prev, and set\+Movement().
+
+
+
+Referenced by box(), create\+Receipt(), create\+Wall(), door(), interference(), loudspeaker(), main(), procedure(), and procedure\+H().
+
+\index{main.\+c@{main.\+c}!create\+Receipt@{create\+Receipt}}
+\index{create\+Receipt@{create\+Receipt}!main.\+c@{main.\+c}}
+\subsubsection[{create\+Receipt(int($\ast$roomtrans)[cols], int var, int x)}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Receipt (
+\begin{DoxyParamCaption}
+\item[{int($\ast$)}]{roomtrans\mbox{[}cols\mbox{]}, }
+\item[{int}]{var, }
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ab86e3577e272f1c7fe704ece65a4214c}{}\label{main_8c_ab86e3577e272f1c7fe704ece65a4214c}
+
+
+Definition at line 640 of file main.\+c.
+
+
+
+References absorption(), create\+Item(), get\+Rebound\+I\+D(), is\+Sound\+Field(), set\+Direction\+I\+D(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), set\+Freq6000b10000(), set\+Movement(), set\+Side\+Of\+Wave(), and set\+Touche().
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!create\+Room@{create\+Room}}
+\index{create\+Room@{create\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{create\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ create\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a5c4808c9fbac3192870ff6282aca4c89}{}\label{main_8c_a5c4808c9fbac3192870ff6282aca4c89}
+Erzeugt einen neuen Raum \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 41 of file main.\+c.
+
+
+
+References i, item\+\_\+node\+::id, j, k, l, item\+\_\+node\+::next, room, x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!create\+Room\+New@{create\+Room\+New}}
+\index{create\+Room\+New@{create\+Room\+New}!main.\+c@{main.\+c}}
+\subsubsection[{create\+Room\+New()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ create\+Room\+New (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a2f527d4fd45c2271db450e5a7398af47}{}\label{main_8c_a2f527d4fd45c2271db450e5a7398af47}
+Erzeugt einen neuen Raum, in den die neuen Elemente gepackt werden. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 105 of file main.\+c.
+
+
+
+References i, item\+\_\+node\+::id, j, k, l, item\+\_\+node\+::next, room\+\_\+new, x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!get\+Direction\+ID@{get\+Direction\+ID}}
+\index{get\+Direction\+ID@{get\+Direction\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Direction\+I\+D(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Direction\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae0af5bf1e046c80aa9918b4a683a9939}{}\label{main_8c_ae0af5bf1e046c80aa9918b4a683a9939}
+Gibt die Richtung eine Sound\+Item 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Richtung 
+\end{DoxyReturn}
+
+
+Definition at line 421 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by add\+Wave(), check\+Sound\+Valid(), interference(), main(), prepare\+Arrays(), procedure(), and procedure\+H().
+
+\index{main.\+c@{main.\+c}!get\+Field\+ID@{get\+Field\+ID}}
+\index{get\+Field\+ID@{get\+Field\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Field\+I\+D(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Field\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3788a71fbf04082421f41a9796392e0e}{}\label{main_8c_a3788a71fbf04082421f41a9796392e0e}
+Gibt die allgemeine Feld ID zurück. 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0\+: Sound, 1\+: Hinderniss, 2\+: ungültiges Element, 3\+: leeres Feld (Linked List Head) 
+\end{DoxyReturn}
+
+
+Definition at line 218 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id, item\+\_\+node\+::next, x\+\_\+format, and y\+\_\+format.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!get\+Freq10000b20000@{get\+Freq10000b20000}}
+\index{get\+Freq10000b20000@{get\+Freq10000b20000}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq10000b20000(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq10000b20000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae734388e3227c3fb1dd199ed7de5965d}{}\label{main_8c_ae734388e3227c3fb1dd199ed7de5965d}
+
+
+Definition at line 395 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq1000b2000@{get\+Freq1000b2000}}
+\index{get\+Freq1000b2000@{get\+Freq1000b2000}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq1000b2000(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq1000b2000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a8d03fb2e8fcc4f09bf538fb99178e2bd}{}\label{main_8c_a8d03fb2e8fcc4f09bf538fb99178e2bd}
+
+
+Definition at line 363 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq100b150@{get\+Freq100b150}}
+\index{get\+Freq100b150@{get\+Freq100b150}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq100b150(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq100b150 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a31fc6a66cd556136a8c6e06659d8d144}{}\label{main_8c_a31fc6a66cd556136a8c6e06659d8d144}
+
+
+Definition at line 339 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq150b400@{get\+Freq150b400}}
+\index{get\+Freq150b400@{get\+Freq150b400}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq150b400(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq150b400 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a39ebd0a811e55b6a28bec6f1070c31b5}{}\label{main_8c_a39ebd0a811e55b6a28bec6f1070c31b5}
+
+
+Definition at line 347 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), save\+Visualisation(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq2000b3500@{get\+Freq2000b3500}}
+\index{get\+Freq2000b3500@{get\+Freq2000b3500}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq2000b3500(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq2000b3500 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a40b43edfd6b7e6517ba22cee0219915d}{}\label{main_8c_a40b43edfd6b7e6517ba22cee0219915d}
+
+
+Definition at line 371 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq20b40@{get\+Freq20b40}}
+\index{get\+Freq20b40@{get\+Freq20b40}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq20b40(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq20b40 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a034b08dd02197f0c7ca56141b0b2a387}{}\label{main_8c_a034b08dd02197f0c7ca56141b0b2a387}
+
+
+Definition at line 323 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq3500b6000@{get\+Freq3500b6000}}
+\index{get\+Freq3500b6000@{get\+Freq3500b6000}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq3500b6000(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq3500b6000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a810a26db40d1406444f91c83d7af9271}{}\label{main_8c_a810a26db40d1406444f91c83d7af9271}
+
+
+Definition at line 379 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq400b1000@{get\+Freq400b1000}}
+\index{get\+Freq400b1000@{get\+Freq400b1000}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq400b1000(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq400b1000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a57b2c8d487852f6f4c40b41c8a12e463}{}\label{main_8c_a57b2c8d487852f6f4c40b41c8a12e463}
+
+
+Definition at line 355 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq40b100@{get\+Freq40b100}}
+\index{get\+Freq40b100@{get\+Freq40b100}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq40b100(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq40b100 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a7f23d6ca252b6940a0c8731a60f42547}{}\label{main_8c_a7f23d6ca252b6940a0c8731a60f42547}
+
+
+Definition at line 331 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Freq6000b10000@{get\+Freq6000b10000}}
+\index{get\+Freq6000b10000@{get\+Freq6000b10000}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Freq6000b10000(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Freq6000b10000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a5afd095070568de0f9c06bd7433ac5c2}{}\label{main_8c_a5afd095070568de0f9c06bd7433ac5c2}
+
+
+Definition at line 387 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), check\+Sound\+Valid(), dec\+Sound\+With\+Movement(), interference(), prepare\+Arrays(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!get\+Item\+\_\+\+Root@{get\+Item\+\_\+\+Root}}
+\index{get\+Item\+\_\+\+Root@{get\+Item\+\_\+\+Root}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Item\+\_\+\+Root(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ get\+Item\+\_\+\+Root (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a777eb4341c9a5daf4e35632fcc158a73}{}\label{main_8c_a777eb4341c9a5daf4e35632fcc158a73}
+Das Root Element ist das 1.\+Element jeder gültigen Koordinate (ID 3) 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 465 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id, item\+\_\+node\+::next, x\+\_\+format, and y\+\_\+format.
+
+
+
+Referenced by add\+Item(), create\+Item(), interference(), main(), save\+Visualisation(), and un\+Touche\+All().
+
+\index{main.\+c@{main.\+c}!get\+Item\+\_\+\+Root\+New\+Room@{get\+Item\+\_\+\+Root\+New\+Room}}
+\index{get\+Item\+\_\+\+Root\+New\+Room@{get\+Item\+\_\+\+Root\+New\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Item\+\_\+\+Root\+New\+Room(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ get\+Item\+\_\+\+Root\+New\+Room (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a28f9d70d5d844acbfcd87257c36afdaa}{}\label{main_8c_a28f9d70d5d844acbfcd87257c36afdaa}
+Das Root Element von new\+\_\+room ist das 1.\+Element jeder gültigen Koordinate (ID 3) 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 579 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id, item\+\_\+node\+::next, x\+\_\+format, and y\+\_\+format.
+
+
+
+Referenced by add\+Item\+New\+Room().
+
+\index{main.\+c@{main.\+c}!get\+Item\+ID@{get\+Item\+ID}}
+\index{get\+Item\+ID@{get\+Item\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Item\+I\+D(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Item\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a52de69fe99722b80280b0afb342fb708}{}\label{main_8c_a52de69fe99722b80280b0afb342fb708}
+Gibt die I\+T\+EM ID zurück. 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0\+: Sound, 1\+: Hinderniss, 2\+: ungültiges Element 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id.
+
+
+
+Referenced by add\+Item(), add\+Item\+New\+Room(), add\+Wave(), check\+Sound\+Valid(), copy\+Movement(), create\+Item(), dec\+Sound\+With\+Movement(), get\+Direction\+I\+D(), get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), get\+Movement(), get\+Side\+Of\+Wave(), get\+Touch(), get\+Wave\+Root(), increase\+Movement(), interference(), prepare\+Arrays(), save\+Visualisation(), set\+Direction\+I\+D(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), set\+Freq6000b10000(), set\+Movement(), set\+Side\+Of\+Wave(), set\+Touche(), set\+Wave\+Root(), test\+Get\+Item\+I\+D(), un\+Touche(), and un\+Touche\+All().
+
+\index{main.\+c@{main.\+c}!get\+Obstacle@{get\+Obstacle}}
+\index{get\+Obstacle@{get\+Obstacle}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Obstacle(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node} get\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_abf0dfee4f51743bb88bdc24f2938ffa8}{}\label{main_8c_abf0dfee4f51743bb88bdc24f2938ffa8}
+
+
+Definition at line 453 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!get\+Rebound\+ID@{get\+Rebound\+ID}}
+\index{get\+Rebound\+ID@{get\+Rebound\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Rebound\+I\+D(int current\+Direction\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Rebound\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{current\+Direction\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_abf4367fb88386f1b3d7b5512068dacc6}{}\label{main_8c_abf4367fb88386f1b3d7b5512068dacc6}
+Gibt die Abprallrichtung abhängig von der aktuellen Richtung 
+\begin{DoxyParams}{Parameters}
+{\em current\+Direction\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+neue Richtung 
+\end{DoxyReturn}
+
+
+Definition at line 432 of file main.\+c.
+
+
+
+Referenced by create\+Receipt(), and main().
+
+\index{main.\+c@{main.\+c}!get\+Room@{get\+Room}}
+\index{get\+Room@{get\+Room}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node} get\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_af9c2abce0ffcce2e850cb3fef1bcfedd}{}\label{main_8c_af9c2abce0ffcce2e850cb3fef1bcfedd}
+Variable room als Getter. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 237 of file main.\+c.
+
+
+
+References room.
+
+\index{main.\+c@{main.\+c}!get\+Sound@{get\+Sound}}
+\index{get\+Sound@{get\+Sound}!main.\+c@{main.\+c}}
+\subsubsection[{get\+Sound(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node} get\+Sound (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a86b3b843fb0ebc9240e32a0fc3fb59e4}{}\label{main_8c_a86b3b843fb0ebc9240e32a0fc3fb59e4}
+
+
+Definition at line 448 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!is\+Obstacle@{is\+Obstacle}}
+\index{is\+Obstacle@{is\+Obstacle}!main.\+c@{main.\+c}}
+\subsubsection[{is\+Obstacle(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a37810a2fcc0ad1bbe5b7cb3592e3937c}{}\label{main_8c_a37810a2fcc0ad1bbe5b7cb3592e3937c}
+Wahrheitswert ob es sich bei der Koordinate um ein Hinderniss handelt. 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 247 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id.
+
+
+
+Referenced by main(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!is\+Sound\+Field@{is\+Sound\+Field}}
+\index{is\+Sound\+Field@{is\+Sound\+Field}!main.\+c@{main.\+c}}
+\subsubsection[{is\+Sound\+Field(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Sound\+Field (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a9de2c42683a9c479f5a402991667eae1}{}\label{main_8c_a9de2c42683a9c479f5a402991667eae1}
+Prüft ob Feld ein Sound Feld ist 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 622 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id, x\+\_\+format, and y\+\_\+format.
+
+
+
+Referenced by add\+Wave(), and create\+Receipt().
+
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}
+Gesamtformat
+
+Taktgeber 
+
+Definition at line 827 of file main.\+c.
+
+
+
+References absorption(), add\+Item\+New\+Room(), add\+Wave(), change\+Rebound\+Side\+Of\+Wave(), change\+Room(), check\+Sound\+Valid(), cols, create\+Receipt(), create\+Room(), create\+Room\+New(), item\+\_\+node\+::data, dec\+Sound\+With\+Movement(), get\+Direction\+I\+D(), get\+Field\+I\+D(), get\+Item\+\_\+\+Root(), get\+Rebound\+I\+D(), get\+Touch(), i, increase\+Movement(), interference(), is\+Obstacle(), j, k, l, loudspeaker(), myrank, item\+\_\+node\+::next, prepare\+Arrays(), realcountleft, realcountright, remove\+Item(), save\+Visualisation(), size, item\+\_\+node\+::\+Sound, un\+Touche\+All(), x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+\index{main.\+c@{main.\+c}!prepare\+Arrays@{prepare\+Arrays}}
+\index{prepare\+Arrays@{prepare\+Arrays}!main.\+c@{main.\+c}}
+\subsubsection[{prepare\+Arrays(item\+\_\+node $\ast$node, int side)}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ prepare\+Arrays (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3789f2d2d6ef04b19dcf398cdd8daccb}{}\label{main_8c_a3789f2d2d6ef04b19dcf398cdd8daccb}
+
+
+Definition at line 681 of file main.\+c.
+
+
+
+References cols, get\+Direction\+I\+D(), get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), get\+Item\+I\+D(), get\+Movement(), get\+Side\+Of\+Wave(), get\+Touch(), j, k, and l.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!remove\+Item@{remove\+Item}}
+\index{remove\+Item@{remove\+Item}!main.\+c@{main.\+c}}
+\subsubsection[{remove\+Item(item\+\_\+node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a43e87e5a2e29cf0b7d2d2f25d4a81cad}{}\label{main_8c_a43e87e5a2e29cf0b7d2d2f25d4a81cad}
+Entfernt das ausgewählte Element 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 532 of file main.\+c.
+
+
+
+References item\+\_\+node\+::next, and item\+\_\+node\+::prev.
+
+
+
+Referenced by add\+Item(), add\+Item\+New\+Room(), check\+Sound\+Valid(), and main().
+
+\index{main.\+c@{main.\+c}!save\+Visualisation@{save\+Visualisation}}
+\index{save\+Visualisation@{save\+Visualisation}!main.\+c@{main.\+c}}
+\subsubsection[{save\+Visualisation(int x\+\_\+offset)}]{\setlength{\rightskip}{0pt plus 5cm}void save\+Visualisation (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+\_\+offset}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a2d8b0955d6cadb0b58cf3e73c303d8b3}{}\label{main_8c_a2d8b0955d6cadb0b58cf3e73c303d8b3}
+Speichert die Matrix ab. Zeitschritte werden berücksichtigt. \begin{DoxySeeAlso}{See also}
+\href{http://wiki.selfhtml.org/wiki/JavaScript/JSON}{\tt http\+://wiki.\+selfhtml.\+org/wiki/\+Java\+Script/\+J\+S\+ON}
+
+\href{http://papo15.juliu5.com/}{\tt http\+://papo15.\+juliu5.\+com/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 730 of file main.\+c.
+
+
+
+References cols, get\+Freq150b400(), get\+Item\+\_\+\+Root(), get\+Item\+I\+D(), is\+Obstacle(), j, k, l, myrank, item\+\_\+node\+::next, rows, x\+\_\+format, y\+\_\+format, and z\+\_\+format.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!set\+Direction\+ID@{set\+Direction\+ID}}
+\index{set\+Direction\+ID@{set\+Direction\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Direction\+I\+D(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Direction\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ac114174872932c0582011ec32127173d}{}\label{main_8c_ac114174872932c0582011ec32127173d}
+Richtung eines Sound\+Item setzen 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 410 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by create\+Receipt(), interference(), loudspeaker(), main(), procedure(), and procedure\+H().
+
+\index{main.\+c@{main.\+c}!set\+Freq10000b20000@{set\+Freq10000b20000}}
+\index{set\+Freq10000b20000@{set\+Freq10000b20000}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq10000b20000(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq10000b20000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ac06ab01dbd802f42ca6d4ebd28d35202}{}\label{main_8c_ac06ab01dbd802f42ca6d4ebd28d35202}
+
+
+Definition at line 315 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq1000b2000@{set\+Freq1000b2000}}
+\index{set\+Freq1000b2000@{set\+Freq1000b2000}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq1000b2000(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq1000b2000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a8d9defcd316948edb0fff018534d1495}{}\label{main_8c_a8d9defcd316948edb0fff018534d1495}
+
+
+Definition at line 291 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq100b150@{set\+Freq100b150}}
+\index{set\+Freq100b150@{set\+Freq100b150}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq100b150(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq100b150 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3fc5252da5fa59cc06c27a2b00cdf25d}{}\label{main_8c_a3fc5252da5fa59cc06c27a2b00cdf25d}
+
+
+Definition at line 273 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq150b400@{set\+Freq150b400}}
+\index{set\+Freq150b400@{set\+Freq150b400}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq150b400(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq150b400 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a7739fd842413604af4e994f32058a522}{}\label{main_8c_a7739fd842413604af4e994f32058a522}
+
+
+Definition at line 279 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq2000b3500@{set\+Freq2000b3500}}
+\index{set\+Freq2000b3500@{set\+Freq2000b3500}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq2000b3500(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq2000b3500 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ac8e10f267af03986af2f4c0304ec05f7}{}\label{main_8c_ac8e10f267af03986af2f4c0304ec05f7}
+
+
+Definition at line 297 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq20b40@{set\+Freq20b40}}
+\index{set\+Freq20b40@{set\+Freq20b40}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq20b40(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq20b40 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ab67ac21a87bc2171acdd00325c472b45}{}\label{main_8c_ab67ac21a87bc2171acdd00325c472b45}
+
+
+Definition at line 261 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq3500b6000@{set\+Freq3500b6000}}
+\index{set\+Freq3500b6000@{set\+Freq3500b6000}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq3500b6000(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq3500b6000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ab4e4ecc4073ab36e0695d847f7742554}{}\label{main_8c_ab4e4ecc4073ab36e0695d847f7742554}
+
+
+Definition at line 303 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq400b1000@{set\+Freq400b1000}}
+\index{set\+Freq400b1000@{set\+Freq400b1000}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq400b1000(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq400b1000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a688f1351221f37c367b16f5f70911322}{}\label{main_8c_a688f1351221f37c367b16f5f70911322}
+
+
+Definition at line 285 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq40b100@{set\+Freq40b100}}
+\index{set\+Freq40b100@{set\+Freq40b100}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq40b100(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq40b100 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a664d9e2a80d231f5d2f7cc743ac569b9}{}\label{main_8c_a664d9e2a80d231f5d2f7cc743ac569b9}
+
+
+Definition at line 267 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Freq6000b10000@{set\+Freq6000b10000}}
+\index{set\+Freq6000b10000@{set\+Freq6000b10000}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Freq6000b10000(item\+\_\+node $\ast$node, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Freq6000b10000 (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a97823b348f21cfc3fc827f1c8fc6bffb}{}\label{main_8c_a97823b348f21cfc3fc827f1c8fc6bffb}
+
+
+Definition at line 309 of file main.\+c.
+
+
+
+References item\+\_\+node\+::data, get\+Item\+I\+D(), and item\+\_\+node\+::\+Sound.
+
+
+
+Referenced by absorption(), create\+Receipt(), dec\+Sound\+With\+Movement(), interference(), loudspeaker(), main(), and set\+Freq\+All().
+
+\index{main.\+c@{main.\+c}!set\+Item\+ID@{set\+Item\+ID}}
+\index{set\+Item\+ID@{set\+Item\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{set\+Item\+I\+D(item\+\_\+node $\ast$node, int id)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Item\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{node, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3d564fcebf7f5265fe47f6ef42395926}{}\label{main_8c_a3d564fcebf7f5265fe47f6ef42395926}
+Gibt einem I\+T\+EM die ID 
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 207 of file main.\+c.
+
+
+
+References item\+\_\+node\+::id.
+
+\index{main.\+c@{main.\+c}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!main.\+c@{main.\+c}}
+\subsubsection[{shutdown()}]{\setlength{\rightskip}{0pt plus 5cm}void shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a7861ee1569802186a619778efc85af13}{}\label{main_8c_a7861ee1569802186a619778efc85af13}
+Verantwortlich für das korrekte herunterfahren 
+
+Definition at line 815 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!startup@{startup}}
+\index{startup@{startup}!main.\+c@{main.\+c}}
+\subsubsection[{startup()}]{\setlength{\rightskip}{0pt plus 5cm}void startup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aecc7d8debf54990ffeaaed5bac7d7d81}{}\label{main_8c_aecc7d8debf54990ffeaaed5bac7d7d81}
+Wird zu Beginn aufgerufen und organisiert den Start 
+
+Definition at line 799 of file main.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{main.\+c@{main.\+c}!all\+Elements@{all\+Elements}}
+\index{all\+Elements@{all\+Elements}!main.\+c@{main.\+c}}
+\subsubsection[{all\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ all\+Elements = N\+U\+LL}\hypertarget{main_8c_af7f888ab478246c722214922898f210c}{}\label{main_8c_af7f888ab478246c722214922898f210c}
+
+
+Definition at line 35 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!all\+Elements\+New@{all\+Elements\+New}}
+\index{all\+Elements\+New@{all\+Elements\+New}!main.\+c@{main.\+c}}
+\subsubsection[{all\+Elements\+New}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ all\+Elements\+New = N\+U\+LL}\hypertarget{main_8c_ade4e9da124d874698c17e544dc1a81ca}{}\label{main_8c_ade4e9da124d874698c17e544dc1a81ca}
+
+
+Definition at line 34 of file main.\+c.
+
+
+
+Referenced by change\+Room().
+
+\index{main.\+c@{main.\+c}!cols@{cols}}
+\index{cols@{cols}!main.\+c@{main.\+c}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}int cols = 18}\hypertarget{main_8c_a4407a60bc4387adae24cee658711f2d9}{}\label{main_8c_a4407a60bc4387adae24cee658711f2d9}
+
+
+Definition at line 29 of file main.\+c.
+
+
+
+Referenced by main(), prepare\+Arrays(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!i@{i}}
+\index{i@{i}!main.\+c@{main.\+c}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int i}\hypertarget{main_8c_acb559820d9ca11295b4500f179ef6392}{}\label{main_8c_acb559820d9ca11295b4500f179ef6392}
+
+
+Definition at line 20 of file main.\+c.
+
+
+
+Referenced by alloc\+Room(), box(), change\+Room(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), loudspeaker(), main(), and un\+Touche\+All().
+
+\index{main.\+c@{main.\+c}!j@{j}}
+\index{j@{j}!main.\+c@{main.\+c}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}int j}\hypertarget{main_8c_a37d972ae0b47b9099e30983131d31916}{}\label{main_8c_a37d972ae0b47b9099e30983131d31916}
+
+
+Definition at line 20 of file main.\+c.
+
+
+
+Referenced by alloc\+Room(), box(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), main(), prepare\+Arrays(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!k@{k}}
+\index{k@{k}!main.\+c@{main.\+c}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}int k}\hypertarget{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}{}\label{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}
+
+
+Definition at line 20 of file main.\+c.
+
+
+
+Referenced by box(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), main(), prepare\+Arrays(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!l@{l}}
+\index{l@{l}!main.\+c@{main.\+c}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}int l}\hypertarget{main_8c_a89606eca6b563ec68d2da2e84657736f}{}\label{main_8c_a89606eca6b563ec68d2da2e84657736f}
+
+
+Definition at line 20 of file main.\+c.
+
+
+
+Referenced by create\+Room(), create\+Room\+New(), main(), prepare\+Arrays(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!myrank@{myrank}}
+\index{myrank@{myrank}!main.\+c@{main.\+c}}
+\subsubsection[{myrank}]{\setlength{\rightskip}{0pt plus 5cm}int myrank}\hypertarget{main_8c_aa8a2431e50f9fc7d8c78af300d5f3bee}{}\label{main_8c_aa8a2431e50f9fc7d8c78af300d5f3bee}
+Open\+M\+PI Rank 0\+: Verwalter V, Rank 1\+: Visualizer V, Rank 2-\/n\+: Sound\+Sim S 
+
+Definition at line 23 of file main.\+c.
+
+
+
+Referenced by main(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!nitems@{nitems}}
+\index{nitems@{nitems}!main.\+c@{main.\+c}}
+\subsubsection[{nitems}]{\setlength{\rightskip}{0pt plus 5cm}const int nitems = 18}\hypertarget{main_8c_a98cba48c4f1ace052b64a61a94f0e92f}{}\label{main_8c_a98cba48c4f1ace052b64a61a94f0e92f}
+
+
+Definition at line 25 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!realcountleft@{realcountleft}}
+\index{realcountleft@{realcountleft}!main.\+c@{main.\+c}}
+\subsubsection[{realcountleft}]{\setlength{\rightskip}{0pt plus 5cm}int realcountleft = 0}\hypertarget{main_8c_ac698d487bf9304eb9849332a74ba35f7}{}\label{main_8c_ac698d487bf9304eb9849332a74ba35f7}
+
+
+Definition at line 28 of file main.\+c.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!realcountright@{realcountright}}
+\index{realcountright@{realcountright}!main.\+c@{main.\+c}}
+\subsubsection[{realcountright}]{\setlength{\rightskip}{0pt plus 5cm}int realcountright = 0}\hypertarget{main_8c_a5c256f6c213bfe3415606e20255587bc}{}\label{main_8c_a5c256f6c213bfe3415606e20255587bc}
+
+
+Definition at line 27 of file main.\+c.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!room@{room}}
+\index{room@{room}!main.\+c@{main.\+c}}
+\subsubsection[{room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ room}\hypertarget{main_8c_a98e34cb6a162e2ff9c62fa441fc11afd}{}\label{main_8c_a98e34cb6a162e2ff9c62fa441fc11afd}
+
+
+Definition at line 32 of file main.\+c.
+
+
+
+Referenced by create\+Room(), and get\+Room().
+
+\index{main.\+c@{main.\+c}!room\+\_\+new@{room\+\_\+new}}
+\index{room\+\_\+new@{room\+\_\+new}!main.\+c@{main.\+c}}
+\subsubsection[{room\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ room\+\_\+new}\hypertarget{main_8c_a41abff2b75fa6027ab5e24ef7a59bfac}{}\label{main_8c_a41abff2b75fa6027ab5e24ef7a59bfac}
+
+
+Definition at line 33 of file main.\+c.
+
+
+
+Referenced by create\+Room\+New().
+
+\index{main.\+c@{main.\+c}!roomtrans@{roomtrans}}
+\index{roomtrans@{roomtrans}!main.\+c@{main.\+c}}
+\subsubsection[{roomtrans}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ roomtrans}\hypertarget{main_8c_a884a7ee2f75fca9f3e725eeef3469816}{}\label{main_8c_a884a7ee2f75fca9f3e725eeef3469816}
+
+
+Modelierung eines Fragments ! 
+
+
+
+Definition at line 31 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!rows@{rows}}
+\index{rows@{rows}!main.\+c@{main.\+c}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}int rows = 5}\hypertarget{main_8c_a061459acc9e078fa4699e0e349887215}{}\label{main_8c_a061459acc9e078fa4699e0e349887215}
+
+
+Definition at line 26 of file main.\+c.
+
+
+
+Referenced by main(), and save\+Visualisation().
+
+\index{main.\+c@{main.\+c}!size@{size}}
+\index{size@{size}!main.\+c@{main.\+c}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int size}\hypertarget{main_8c_a439227feff9d7f55384e8780cfc2eb82}{}\label{main_8c_a439227feff9d7f55384e8780cfc2eb82}
+
+
+Definition at line 24 of file main.\+c.
+
+
+
+Referenced by main().
+
+\index{main.\+c@{main.\+c}!visu\+Step@{visu\+Step}}
+\index{visu\+Step@{visu\+Step}!main.\+c@{main.\+c}}
+\subsubsection[{visu\+Step}]{\setlength{\rightskip}{0pt plus 5cm}int visu\+Step = 1}\hypertarget{main_8c_ab2756720193d676d235685da669031e1}{}\label{main_8c_ab2756720193d676d235685da669031e1}
+
+
+Step Counter für Visualisierung. 
+
+
+
+Definition at line 15 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!x\+\_\+format@{x\+\_\+format}}
+\index{x\+\_\+format@{x\+\_\+format}!main.\+c@{main.\+c}}
+\subsubsection[{x\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int x\+\_\+format}\hypertarget{main_8c_a8017a0912da3ec358c0eaca7631a8800}{}\label{main_8c_a8017a0912da3ec358c0eaca7631a8800}
+
+
+Raum Formate. 
+
+
+
+Definition at line 17 of file main.\+c.
+
+
+
+Referenced by alloc\+Room(), change\+Room(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), get\+Field\+I\+D(), get\+Item\+\_\+\+Root(), get\+Item\+\_\+\+Root\+New\+Room(), is\+Sound\+Field(), main(), save\+Visualisation(), and un\+Touche\+All().
+
+\index{main.\+c@{main.\+c}!y\+\_\+format@{y\+\_\+format}}
+\index{y\+\_\+format@{y\+\_\+format}!main.\+c@{main.\+c}}
+\subsubsection[{y\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int y\+\_\+format}\hypertarget{main_8c_adf8acfcac589366a63f10a845934becb}{}\label{main_8c_adf8acfcac589366a63f10a845934becb}
+
+
+Definition at line 18 of file main.\+c.
+
+
+
+Referenced by alloc\+Room(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), get\+Field\+I\+D(), get\+Item\+\_\+\+Root(), get\+Item\+\_\+\+Root\+New\+Room(), is\+Sound\+Field(), main(), save\+Visualisation(), and un\+Touche\+All().
+
+\index{main.\+c@{main.\+c}!z\+\_\+format@{z\+\_\+format}}
+\index{z\+\_\+format@{z\+\_\+format}!main.\+c@{main.\+c}}
+\subsubsection[{z\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int z\+\_\+format}\hypertarget{main_8c_a52fa078cf5f7807fd75db3b98b40c5d9}{}\label{main_8c_a52fa078cf5f7807fd75db3b98b40c5d9}
+
+
+Definition at line 19 of file main.\+c.
+
+
+
+Referenced by alloc\+Room(), create\+Room(), create\+Room\+New(), create\+Wall(), door(), main(), save\+Visualisation(), and un\+Touche\+All().
+

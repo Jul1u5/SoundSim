@@ -1,0 +1,179 @@
+\hypertarget{minunit__soundsim_8c}{}\section{minunit\+\_\+soundsim.\+c File Reference}
+\label{minunit__soundsim_8c}\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soundwavefunction.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}minunit.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{minunit__soundsim_8c_a9cc97fd6472b8f586bcf1b67d83cf7eb}{test\+Get\+Item\+ID} ()
+\item 
+static char $\ast$ \hyperlink{minunit__soundsim_8c_a5778abb510b0149069f4ed1de091f736}{all\+\_\+tests} ()
+\item 
+int \hyperlink{minunit__soundsim_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{minunit__soundsim_8c_a91aa4203331e915f2d20dd26579791ee}{tests\+\_\+run} = 0
+\item 
+int \hyperlink{minunit__soundsim_8c_a8017a0912da3ec358c0eaca7631a8800}{x\+\_\+format} = 100
+\begin{DoxyCompactList}\small\item\em Raum Formate. \end{DoxyCompactList}\item 
+int \hyperlink{minunit__soundsim_8c_adf8acfcac589366a63f10a845934becb}{y\+\_\+format} = 100
+\item 
+int \hyperlink{minunit__soundsim_8c_a52fa078cf5f7807fd75db3b98b40c5d9}{z\+\_\+format} = 100
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{minunit__soundsim_8c_a98e34cb6a162e2ff9c62fa441fc11afd}{room}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$$\ast$$\ast$ \hyperlink{minunit__soundsim_8c_a41abff2b75fa6027ab5e24ef7a59bfac}{room\+\_\+new}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{minunit__soundsim_8c_ab823b5bd4ed6d3fb5e78bd51f916ad15}{test1}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{minunit__soundsim_8c_a00355720c258277749cc7f1928910f9b}{test2}
+\item 
+\hyperlink{structitem__node}{item\+\_\+node} $\ast$ \hyperlink{minunit__soundsim_8c_a021591c7a6aad391d039309f3223a02d}{test3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!all\+\_\+tests@{all\+\_\+tests}}
+\index{all\+\_\+tests@{all\+\_\+tests}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{all\+\_\+tests()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ all\+\_\+tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{minunit__soundsim_8c_a5778abb510b0149069f4ed1de091f736}{}\label{minunit__soundsim_8c_a5778abb510b0149069f4ed1de091f736}
+
+
+Definition at line 27 of file minunit\+\_\+soundsim.\+c.
+
+
+
+References mu\+\_\+run\+\_\+test, and test\+Get\+Item\+I\+D().
+
+
+
+Referenced by main().
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!main@{main}}
+\index{main@{main}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{main(int argc, char $\ast$$\ast$argv)}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{minunit__soundsim_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{minunit__soundsim_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Definition at line 33 of file minunit\+\_\+soundsim.\+c.
+
+
+
+References all\+\_\+tests(), create\+Item(), create\+Room(), set\+Direction\+I\+D(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), set\+Freq6000b10000(), set\+Side\+Of\+Wave(), tests\+\_\+run, x\+\_\+format, and y\+\_\+format.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!test\+Get\+Item\+ID@{test\+Get\+Item\+ID}}
+\index{test\+Get\+Item\+ID@{test\+Get\+Item\+ID}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{test\+Get\+Item\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+Get\+Item\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{minunit__soundsim_8c_a9cc97fd6472b8f586bcf1b67d83cf7eb}{}\label{minunit__soundsim_8c_a9cc97fd6472b8f586bcf1b67d83cf7eb}
+
+
+Definition at line 21 of file minunit\+\_\+soundsim.\+c.
+
+
+
+References get\+Item\+I\+D(), and mu\+\_\+assert.
+
+
+
+Referenced by all\+\_\+tests().
+
+
+
+\subsection{Variable Documentation}
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!room@{room}}
+\index{room@{room}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ room}\hypertarget{minunit__soundsim_8c_a98e34cb6a162e2ff9c62fa441fc11afd}{}\label{minunit__soundsim_8c_a98e34cb6a162e2ff9c62fa441fc11afd}
+
+
+Definition at line 14 of file minunit\+\_\+soundsim.\+c.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!room\+\_\+new@{room\+\_\+new}}
+\index{room\+\_\+new@{room\+\_\+new}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{room\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$$\ast$$\ast$ room\+\_\+new}\hypertarget{minunit__soundsim_8c_a41abff2b75fa6027ab5e24ef7a59bfac}{}\label{minunit__soundsim_8c_a41abff2b75fa6027ab5e24ef7a59bfac}
+
+
+Definition at line 15 of file minunit\+\_\+soundsim.\+c.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!test1@{test1}}
+\index{test1@{test1}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{test1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ test1}\hypertarget{minunit__soundsim_8c_ab823b5bd4ed6d3fb5e78bd51f916ad15}{}\label{minunit__soundsim_8c_ab823b5bd4ed6d3fb5e78bd51f916ad15}
+
+
+Definition at line 16 of file minunit\+\_\+soundsim.\+c.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!test2@{test2}}
+\index{test2@{test2}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{test2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ test2}\hypertarget{minunit__soundsim_8c_a00355720c258277749cc7f1928910f9b}{}\label{minunit__soundsim_8c_a00355720c258277749cc7f1928910f9b}
+
+
+Definition at line 17 of file minunit\+\_\+soundsim.\+c.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!test3@{test3}}
+\index{test3@{test3}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{test3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf item\+\_\+node}$\ast$ test3}\hypertarget{minunit__soundsim_8c_a021591c7a6aad391d039309f3223a02d}{}\label{minunit__soundsim_8c_a021591c7a6aad391d039309f3223a02d}
+
+
+Definition at line 18 of file minunit\+\_\+soundsim.\+c.
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!tests\+\_\+run@{tests\+\_\+run}}
+\index{tests\+\_\+run@{tests\+\_\+run}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{tests\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}int tests\+\_\+run = 0}\hypertarget{minunit__soundsim_8c_a91aa4203331e915f2d20dd26579791ee}{}\label{minunit__soundsim_8c_a91aa4203331e915f2d20dd26579791ee}
+
+
+Definition at line 10 of file minunit\+\_\+soundsim.\+c.
+
+
+
+Referenced by main().
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!x\+\_\+format@{x\+\_\+format}}
+\index{x\+\_\+format@{x\+\_\+format}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{x\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int x\+\_\+format = 100}\hypertarget{minunit__soundsim_8c_a8017a0912da3ec358c0eaca7631a8800}{}\label{minunit__soundsim_8c_a8017a0912da3ec358c0eaca7631a8800}
+
+
+Raum Formate. 
+
+
+
+Definition at line 11 of file minunit\+\_\+soundsim.\+c.
+
+
+
+Referenced by main().
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!y\+\_\+format@{y\+\_\+format}}
+\index{y\+\_\+format@{y\+\_\+format}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{y\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int y\+\_\+format = 100}\hypertarget{minunit__soundsim_8c_adf8acfcac589366a63f10a845934becb}{}\label{minunit__soundsim_8c_adf8acfcac589366a63f10a845934becb}
+
+
+Definition at line 12 of file minunit\+\_\+soundsim.\+c.
+
+
+
+Referenced by main().
+
+\index{minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}!z\+\_\+format@{z\+\_\+format}}
+\index{z\+\_\+format@{z\+\_\+format}!minunit\+\_\+soundsim.\+c@{minunit\+\_\+soundsim.\+c}}
+\subsubsection[{z\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}int z\+\_\+format = 100}\hypertarget{minunit__soundsim_8c_a52fa078cf5f7807fd75db3b98b40c5d9}{}\label{minunit__soundsim_8c_a52fa078cf5f7807fd75db3b98b40c5d9}
+
+
+Definition at line 13 of file minunit\+\_\+soundsim.\+c.
+

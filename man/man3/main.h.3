@@ -1,0 +1,553 @@
+.TH "main.h" 3 "Wed Sep 30 2015" "SoundSim" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBitem_node\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBitem_node\fP \fBitem_node\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetItemID\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "void \fBsetItemID\fP (\fBitem_node\fP *node, int id)"
+.br
+.ti -1c
+.RI "int \fBgetFieldID\fP (int x, int y, int z)"
+.br
+.ti -1c
+.RI "void \fBsetFreq20b40\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq40b100\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq100b150\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq150b400\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq400b1000\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq1000b2000\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq2000b3500\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq3500b6000\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq6000b10000\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "void \fBsetFreq10000b20000\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "int \fBgetFreq20b40\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq40b100\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq100b150\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq150b400\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq400b1000\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq1000b2000\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq2000b3500\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq3500b6000\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq6000b10000\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "int \fBgetFreq10000b20000\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "void \fBsetDirectionID\fP (\fBitem_node\fP *node, int value)"
+.br
+.ti -1c
+.RI "int \fBgetDirectionID\fP (\fBitem_node\fP *node)"
+.br
+.ti -1c
+.RI "\fBitem_node\fP * \fBgetItem_Root\fP (int x, int y, int z)"
+.br
+.ti -1c
+.RI "\fBitem_node\fP * \fBcreateItem\fP (int x, int y, int z, int id)"
+.br
+.ti -1c
+.RI "\fBitem_node\fP * \fBaddItem\fP (\fBitem_node\fP *node, int x, int y, int z)"
+.br
+.ti -1c
+.RI "void \fBaddItemNewRoom\fP (\fBitem_node\fP *node, int x, int y, int z)"
+.br
+.ti -1c
+.RI "int \fBisSoundField\fP (int x, int y, int z)"
+.br
+.ti -1c
+.RI "void \fBremoveItem\fP (\fBitem_node\fP *node)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBx_format\fP"
+.br
+.RI "\fIRaum Formate\&. \fP"
+.ti -1c
+.RI "int \fBy_format\fP"
+.br
+.ti -1c
+.RI "int \fBz_format\fP"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBitem_node\fP \fBitem_node\fP"
+Alle Elemente werden in Form dieses Structs repräsentiert 
+.SH "Function Documentation"
+.PP 
+.SS "\fBitem_node\fP* addItem (\fBitem_node\fP * node, int x, int y, int z)"
+Fügt ein Element an eine neue Stelle (Eigenschaften bleiben erhalten), Element an der alten Position wird entfernt 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 556 of file main\&.c\&.
+.PP
+References getItem_Root(), getItemID(), item_node::next, item_node::prev, and removeItem()\&.
+.SS "void addItemNewRoom (\fBitem_node\fP * node, int x, int y, int z)"
+Fügt ein Element an eine neue Stelle in new_room (Eigenschaften bleiben erhalten), Element an der alten Position wird entfernt 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+
+.PP
+Definition at line 599 of file main\&.c\&.
+.PP
+References getItem_RootNewRoom(), getItemID(), item_node::next, item_node::prev, and removeItem()\&.
+.PP
+Referenced by main(), procedure(), and procedureH()\&.
+.SS "\fBitem_node\fP* createItem (int x, int y, int z, int id)"
+Erzeugt ein neues Item mit einer bestimmten ID 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.br
+\fIid\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 487 of file main\&.c\&.
+.PP
+References getItem_Root(), getItemID(), item_node::id, item_node::next, item_node::prev, and setMovement()\&.
+.PP
+Referenced by box(), createReceipt(), createWall(), door(), interference(), loudspeaker(), main(), procedure(), and procedureH()\&.
+.SS "int getDirectionID (\fBitem_node\fP * node)"
+Gibt die Richtung eine SoundItem 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Richtung 
+.RE
+.PP
+
+.PP
+Definition at line 421 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by addWave(), checkSoundValid(), interference(), main(), prepareArrays(), procedure(), and procedureH()\&.
+.SS "int getFieldID (int x, int y, int z)"
+Gibt die allgemeine Feld ID zurück\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0: Sound, 1: Hinderniss, 2: ungültiges Element, 3: leeres Feld (Linked List Head) 
+.RE
+.PP
+
+.PP
+Definition at line 218 of file main\&.c\&.
+.PP
+References item_node::id, item_node::next, x_format, and y_format\&.
+.PP
+Referenced by main()\&.
+.SS "int getFreq10000b20000 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 395 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq1000b2000 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 363 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq100b150 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 339 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq150b400 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 347 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), saveVisualisation(), and setFreqAll()\&.
+.SS "int getFreq2000b3500 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 371 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq20b40 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 323 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq3500b6000 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 379 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq400b1000 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 355 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq40b100 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 331 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "int getFreq6000b10000 (\fBitem_node\fP * node)"
+
+.PP
+Definition at line 387 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), checkSoundValid(), decSoundWithMovement(), interference(), prepareArrays(), and setFreqAll()\&.
+.SS "\fBitem_node\fP* getItem_Root (int x, int y, int z)"
+Das Root Element ist das 1\&.Element jeder gültigen Koordinate (ID 3) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 465 of file main\&.c\&.
+.PP
+References item_node::id, item_node::next, x_format, and y_format\&.
+.PP
+Referenced by addItem(), createItem(), interference(), main(), saveVisualisation(), and unToucheAll()\&.
+.SS "int getItemID (\fBitem_node\fP * node)"
+Gibt die ITEM ID zurück\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0: Sound, 1: Hinderniss, 2: ungültiges Element 
+.RE
+.PP
+
+.PP
+Definition at line 196 of file main\&.c\&.
+.PP
+References item_node::id\&.
+.PP
+Referenced by addItem(), addItemNewRoom(), addWave(), checkSoundValid(), copyMovement(), createItem(), decSoundWithMovement(), getDirectionID(), getFreq10000b20000(), getFreq1000b2000(), getFreq100b150(), getFreq150b400(), getFreq2000b3500(), getFreq20b40(), getFreq3500b6000(), getFreq400b1000(), getFreq40b100(), getFreq6000b10000(), getMovement(), getSideOfWave(), getTouch(), getWaveRoot(), increaseMovement(), interference(), prepareArrays(), saveVisualisation(), setDirectionID(), setFreq10000b20000(), setFreq1000b2000(), setFreq100b150(), setFreq150b400(), setFreq2000b3500(), setFreq20b40(), setFreq3500b6000(), setFreq400b1000(), setFreq40b100(), setFreq6000b10000(), setMovement(), setSideOfWave(), setTouche(), setWaveRoot(), testGetItemID(), unTouche(), and unToucheAll()\&.
+.SS "int isSoundField (int x, int y, int z)"
+Prüft ob Feld ein Sound Feld ist 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 622 of file main\&.c\&.
+.PP
+References item_node::id, x_format, and y_format\&.
+.PP
+Referenced by addWave(), and createReceipt()\&.
+.SS "void removeItem (\fBitem_node\fP * node)"
+Entfernt das ausgewählte Element 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.RE
+.PP
+
+.PP
+Definition at line 532 of file main\&.c\&.
+.PP
+References item_node::next, and item_node::prev\&.
+.PP
+Referenced by addItem(), addItemNewRoom(), checkSoundValid(), and main()\&.
+.SS "void setDirectionID (\fBitem_node\fP * node, int value)"
+Richtung eines SoundItem setzen 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+
+.PP
+Definition at line 410 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by createReceipt(), interference(), loudspeaker(), main(), procedure(), and procedureH()\&.
+.SS "void setFreq10000b20000 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 315 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq1000b2000 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 291 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq100b150 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 273 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq150b400 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 279 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq2000b3500 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 297 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq20b40 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 261 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq3500b6000 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 303 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq400b1000 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 285 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq40b100 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 267 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setFreq6000b10000 (\fBitem_node\fP * node, int value)"
+
+.PP
+Definition at line 309 of file main\&.c\&.
+.PP
+References item_node::data, getItemID(), and item_node::Sound\&.
+.PP
+Referenced by absorption(), createReceipt(), decSoundWithMovement(), interference(), loudspeaker(), main(), and setFreqAll()\&.
+.SS "void setItemID (\fBitem_node\fP * node, int id)"
+Gibt einem ITEM die ID 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.br
+\fIid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file main\&.c\&.
+.PP
+References item_node::id\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int x_format"
+
+.PP
+Raum Formate\&. 
+.PP
+Definition at line 17 of file main\&.c\&.
+.PP
+Referenced by allocRoom(), changeRoom(), createRoom(), createRoomNew(), createWall(), door(), getFieldID(), getItem_Root(), getItem_RootNewRoom(), isSoundField(), main(), saveVisualisation(), and unToucheAll()\&.
+.SS "int y_format"
+
+.PP
+Definition at line 18 of file main\&.c\&.
+.PP
+Referenced by allocRoom(), createRoom(), createRoomNew(), createWall(), door(), getFieldID(), getItem_Root(), getItem_RootNewRoom(), isSoundField(), main(), saveVisualisation(), and unToucheAll()\&.
+.SS "int z_format"
+
+.PP
+Definition at line 19 of file main\&.c\&.
+.PP
+Referenced by allocRoom(), createRoom(), createRoomNew(), createWall(), door(), main(), saveVisualisation(), and unToucheAll()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoundSim from the source code\&.

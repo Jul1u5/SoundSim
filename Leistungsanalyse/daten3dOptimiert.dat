@@ -1,0 +1,8 @@
+#Daten der Analyse des 3D Raumes mit nur ein paar wenigen Testverschiebungen.
+#Dieses sind Daten vor dem Parallelisieren.
+#xgröße des Raumes^3 yZeiteinheiten in Sekunden
+
+100 13.57
+200 122.24
+300 531
+400 2223

@@ -1,0 +1,10 @@
+#Daten der Analyse des 3D Raumes mit nur ein paar wenigen Testverschiebungen.
+#Dieses sind Daten vor dem Parallelisieren.
+#xgröße des Raumes^3 yZeiteinheiten in Sekunden zAnzahl der Raumdurchgänge
+
+100 3.32 25
+100 13.57 100
+200 32 25
+200 122.24 100
+300 531 100
+400 2223 100

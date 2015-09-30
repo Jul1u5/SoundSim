@@ -1,0 +1,116 @@
+\hypertarget{collision_8h}{}\section{collision.\+h File Reference}
+\label{collision_8h}\index{collision.\+h@{collision.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{collision_8h_a3d3dbbd1172995bc38f84fe95386eee8}{absorption} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, float coeff)
+\item 
+void \hyperlink{collision_8h_a8498401600a51684f2f32140b340eb60}{interference} (int x, int y, int z)
+\item 
+bool \hyperlink{collision_8h_a533797e4f9bd3cd044dd8c2f8cb256c4}{check\+Sound\+Valid} (\hyperlink{structitem__node}{item\+\_\+node} $\ast$node, int x, int y, int z)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{collision.\+h@{collision.\+h}!absorption@{absorption}}
+\index{absorption@{absorption}!collision.\+h@{collision.\+h}}
+\subsubsection[{absorption(item\+\_\+node $\ast$node, float coeff)}]{\setlength{\rightskip}{0pt plus 5cm}void absorption (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{temp, }
+\item[{float}]{coeff}
+\end{DoxyParamCaption}
+)}\hypertarget{collision_8h_a3d3dbbd1172995bc38f84fe95386eee8}{}\label{collision_8h_a3d3dbbd1172995bc38f84fe95386eee8}
+Absorption der Frequenzen um einen Koeffizienten
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Item das reduziert wird \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em coeff} & Reduzierungsfaktor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file collision.\+c.
+
+
+
+References get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), and set\+Freq6000b10000().
+
+
+
+Referenced by create\+Receipt(), and main().
+
+\index{collision.\+h@{collision.\+h}!check\+Sound\+Valid@{check\+Sound\+Valid}}
+\index{check\+Sound\+Valid@{check\+Sound\+Valid}!collision.\+h@{collision.\+h}}
+\subsubsection[{check\+Sound\+Valid(item\+\_\+node $\ast$node, int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+Sound\+Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf item\+\_\+node} $\ast$}]{temp, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{collision_8h_a533797e4f9bd3cd044dd8c2f8cb256c4}{}\label{collision_8h_a533797e4f9bd3cd044dd8c2f8cb256c4}
+Ungültige Sound\+Items werden entfernt 
+\begin{DoxyParams}{Parameters}
+{\em temp} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gültigkeit des Wertes 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file collision.\+c.
+
+
+
+References get\+Direction\+I\+D(), get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), get\+Item\+I\+D(), and remove\+Item().
+
+
+
+Referenced by main().
+
+\index{collision.\+h@{collision.\+h}!interference@{interference}}
+\index{interference@{interference}!collision.\+h@{collision.\+h}}
+\subsubsection[{interference(int x, int y, int z)}]{\setlength{\rightskip}{0pt plus 5cm}void interference (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{collision_8h_a8498401600a51684f2f32140b340eb60}{}\label{collision_8h_a8498401600a51684f2f32140b340eb60}
+Allgemeine Interferenzen 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file collision.\+c.
+
+
+
+References create\+Item(), get\+Direction\+I\+D(), get\+Freq10000b20000(), get\+Freq1000b2000(), get\+Freq100b150(), get\+Freq150b400(), get\+Freq2000b3500(), get\+Freq20b40(), get\+Freq3500b6000(), get\+Freq400b1000(), get\+Freq40b100(), get\+Freq6000b10000(), get\+Item\+\_\+\+Root(), get\+Item\+I\+D(), get\+Side\+Of\+Wave(), get\+Wave\+Root(), item\+\_\+node\+::next, set\+Direction\+I\+D(), set\+Freq10000b20000(), set\+Freq1000b2000(), set\+Freq100b150(), set\+Freq150b400(), set\+Freq2000b3500(), set\+Freq20b40(), set\+Freq3500b6000(), set\+Freq400b1000(), set\+Freq40b100(), set\+Freq6000b10000(), set\+Side\+Of\+Wave(), and set\+Wave\+Root().
+
+
+
+Referenced by main().
+

@@ -1,0 +1,55 @@
+.TH "extras.h" 3 "Wed Sep 30 2015" "SoundSim" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+extras.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcreateWall\fP ()"
+.br
+.ti -1c
+.RI "void \fBloudspeaker\fP ()"
+.br
+.ti -1c
+.RI "void \fBbox\fP ()"
+.br
+.ti -1c
+.RI "void \fBdoor\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void box ()"
+
+.PP
+Definition at line 49 of file extras\&.c\&.
+.PP
+References createItem(), i, j, and k\&.
+.SS "void createWall ()"
+Erzeugt eine Wand komplett um den Raum 
+.PP
+Definition at line 8 of file extras\&.c\&.
+.PP
+References createItem(), i, j, k, x_format, y_format, and z_format\&.
+.SS "void door ()"
+
+.PP
+Definition at line 24 of file extras\&.c\&.
+.PP
+References createItem(), i, j, k, x_format, y_format, and z_format\&.
+.SS "void loudspeaker ()"
+Funktion eines Lautsprechers wird simuliert 
+.PP
+Definition at line 61 of file extras\&.c\&.
+.PP
+References createItem(), i, setDirectionID(), setFreq10000b20000(), setFreq1000b2000(), setFreq100b150(), setFreq150b400(), setFreq2000b3500(), setFreq20b40(), setFreq3500b6000(), setFreq400b1000(), setFreq40b100(), setFreq6000b10000(), and setSideOfWave()\&.
+.PP
+Referenced by main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoundSim from the source code\&.

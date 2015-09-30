@@ -1,0 +1,55 @@
+Log:
+• increaseMovement an unterschiedlichen Stellen
+• soundwave, ca Zeile 500, passt das so mit den richtungen? 2 mal hintereinander die gleichen
+Antwort: Ja das passt weil Nach Oben rechts und nach unten rechts genau symmetrisch in dem 
+Punkt ist.
+
+
+• kann man super in eine Funktion auslagern, verkürzt den Krieg um Jahre!
+
+Würde ich noch mit warten, weil man ja gerade NICHT die x und y Koordinaten
+abfragen kann!
+->brauchst du ja bei diesem Kram auch nicht, sondern halt tempAdd, temp
+setSideOfWave(tempAdd, 1);
+setDirectionID(tempAdd, getDirectionID(temp));
+setFreq20b40(tempAdd, getFreq20b40(temp) * 0.96);
+setFreq40b100(tempAdd, getFreq40b100(temp) * 0.96 );
+setFreq100b150(tempAdd, getFreq100b150(temp) * 0.96);
+setFreq150b400(tempAdd, getFreq150b400(temp) * 0.96);
+setFreq400b1000(tempAdd, getFreq400b1000(temp) * 0.96);
+setFreq1000b2000(tempAdd, getFreq1000b2000(temp) * 0.96);
+setFreq2000b3500(tempAdd, getFreq2000b3500(temp) * 0.96);
+setFreq3500b6000(tempAdd, getFreq3500b6000(temp) * 0.96 );
+setFreq6000b10000(tempAdd, getFreq6000b10000(temp) * 0.96);
+setFreq10000b20000(tempAdd, getFreq10000b20000(temp) * 0.96);
+
+- Einfügen, dass wenn die dB = 0 , dann Teilchen entfernen
+
+-Einfügen von Collision.
+
+void absorption(item_node *node, int x, int y, float coeff);
+macht so keinen sinn glaube ich. In Main.c gehen wir ja an der Stelle wo wir diese Funktion aufrufen schon durch alle Elemente durch. Darum sollte es ja unnötotig sein in dieser Funktion auch noch mal vom Root Element durch alle Elemente durch zugehen oder? Dann würden wir jedes Tonelement so oft reduzieren wie Elemente an dieser Stelle sind. 
+Außerdem müssen wir den coeff ja nicht absolut angeben als Parameter. Besser wäre es wenn wir als Parameter die node übergeben und entweder die x und y koordinaten des Hindernisses, wobei wir dann ja in 
+struct{
+float reduce; // muss ein Absoprtionsfaktor sein ≥ 1 und für die Frequenz angepasst werden
+} Obstacle;
+den coeff haben, oder wie holen uns den coeff in der main und geben ihn halt als Parameter weiter.
+
+
+- nach Korrektur der addItem, createItem -> SideOfWave(node,0) einfügen. Solange explizit bei Testitems angeben.
+
+- Ich wunder mich nur, warum er bei der Ausfürhung die rechte Seite wesentlich öfter als die Linke Seite erweitert. Mag wohl mit dem Copy Movement zusammenhängen, was durch das addItem gelöst werden soll!
+
+
+- Wenn wir alle Zellen auf Sound setzen dann sollten wir auch alle FreqdB auf 0 setzen, da ich für die Interferenz alle felder durchgehe udn die dB brauche.
+
+- Abort trap 6 …
+
+- test.c Dateien in Makefile einbinden.
+
+
+
+FÜr 3D (davor interference fixxen)
+createROOM, Item Parameter, SOundwavefunction, Collision anpassen, neue Richtungen,
+neue Richtungen in der Soundwavefunction
+

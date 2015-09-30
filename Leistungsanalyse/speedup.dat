@@ -1,0 +1,11 @@
+#Daten der Analyse einer 200^3 Matrix
+#xAnzahl Prozesse #ySpeedup
+
+1 1
+2 1.82
+4 3.58
+8 6,77
+16 7.1
+20 8.13
+26 11.9
+

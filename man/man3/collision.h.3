@@ -1,0 +1,97 @@
+.TH "collision.h" 3 "Wed Sep 30 2015" "SoundSim" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+collision.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBabsorption\fP (\fBitem_node\fP *node, float coeff)"
+.br
+.ti -1c
+.RI "void \fBinterference\fP (int x, int y, int z)"
+.br
+.ti -1c
+.RI "bool \fBcheckSoundValid\fP (\fBitem_node\fP *node, int x, int y, int z)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void absorption (\fBitem_node\fP * temp, float coeff)"
+Absorption der Frequenzen um einen Koeffizienten
+.PP
+\fBParameters:\fP
+.RS 4
+\fItemp\fP Item das reduziert wird 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.br
+\fIcoeff\fP Reduzierungsfaktor 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file collision\&.c\&.
+.PP
+References getFreq10000b20000(), getFreq1000b2000(), getFreq100b150(), getFreq150b400(), getFreq2000b3500(), getFreq20b40(), getFreq3500b6000(), getFreq400b1000(), getFreq40b100(), getFreq6000b10000(), setFreq10000b20000(), setFreq1000b2000(), setFreq100b150(), setFreq150b400(), setFreq2000b3500(), setFreq20b40(), setFreq3500b6000(), setFreq400b1000(), setFreq40b100(), and setFreq6000b10000()\&.
+.PP
+Referenced by createReceipt(), and main()\&.
+.SS "bool checkSoundValid (\fBitem_node\fP * temp, int x, int y, int z)"
+Ungültige SoundItems werden entfernt 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItemp\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Gültigkeit des Wertes 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file collision\&.c\&.
+.PP
+References getDirectionID(), getFreq10000b20000(), getFreq1000b2000(), getFreq100b150(), getFreq150b400(), getFreq2000b3500(), getFreq20b40(), getFreq3500b6000(), getFreq400b1000(), getFreq40b100(), getFreq6000b10000(), getItemID(), and removeItem()\&.
+.PP
+Referenced by main()\&.
+.SS "void interference (int x, int y, int z)"
+Allgemeine Interferenzen 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIz\fP 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file collision\&.c\&.
+.PP
+References createItem(), getDirectionID(), getFreq10000b20000(), getFreq1000b2000(), getFreq100b150(), getFreq150b400(), getFreq2000b3500(), getFreq20b40(), getFreq3500b6000(), getFreq400b1000(), getFreq40b100(), getFreq6000b10000(), getItem_Root(), getItemID(), getSideOfWave(), getWaveRoot(), item_node::next, setDirectionID(), setFreq10000b20000(), setFreq1000b2000(), setFreq100b150(), setFreq150b400(), setFreq2000b3500(), setFreq20b40(), setFreq3500b6000(), setFreq400b1000(), setFreq40b100(), setFreq6000b10000(), setSideOfWave(), and setWaveRoot()\&.
+.PP
+Referenced by main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoundSim from the source code\&.
