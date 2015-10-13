@@ -104,35 +104,21 @@ void allocRoom() {
  */
 item_node*** createRoomNew()
 {
-	/*if (room_new != NULL) {
-		printf("nicht null\n");
-		free(allElementsNew);
-		for(int i = 0; i < x; i++)
-		{
-			free(room_new[i]);
-			room_new[i] = NULL;
-		}
-		free (room_new);
-		room_new = NULL;
-	}*/
 	room_new = NULL;
 	if (room_new == NULL) {
 		allElementsNew = malloc(x_format * y_format * z_format * sizeof(item_node));
 		room_new = malloc(x_format * sizeof(item_node **));
 		if (room_new == NULL) {
-			//return NULL;
 		}
 		for (int i = 0; i < x_format; i++)
 		{
 			room_new[i] = malloc(y_format * sizeof(item_node *));
 			if (room_new[i] == NULL) {
-				//return NULL;
 			}
 			for (int j = 0; j < y_format; j++)
 			{
 				room_new[i][j] = allElementsNew + (i * y_format * z_format) + (j * z_format);
 				if (room_new[i][j] == NULL) {
-					//return NULL;
 				}
 			}
 		}
@@ -141,25 +127,17 @@ item_node*** createRoomNew()
 	for (j = 0; j < x_format; j++) {
 		for (k = 0; k < y_format; k++) {
 			for (l = 0; l < z_format; l++) {
-				//printf("x: %d, y: %d, z: %d, id: %d\n",j,k,l,getFieldID(j,k,l));
-
 				if ((room[j][k][l].next) != NULL) {
 					if ((room[j][k][l].next->id) == 1) {
 						room_new[j][k][l] = room[j][k][l];
-						//printf("WAND:! x: %d, y: %d, z: %d, id: %d\n",j,k,l,getFieldID(j,k,l));
 					} else {
 						room_new[j][k][l].id = 3;
 						room_new[j][k][l].next = NULL;
-						//return NULL;
 					}
 				}
 				else {
-					//printf("keine wand:! x: %d, y: %d, z: %d, id: %d\n",j,k,l,getFieldID(j,k,l));
-
 					room_new[j][k][l].id = 3;
 					room_new[j][k][l].next = NULL;
-					//return NULL;
-
 				}
 			}
 		}
@@ -181,12 +159,8 @@ void changeRoom(item_node *** newRoom)
 		free (room);
 		room = NULL;
 	}
-	//free(room);
-	//free(allElements);
 	room = newRoom;
 	allElements = allElementsNew;
-	//memmove(room,room_new, 200 * sizeof(item_node **));
-	//memmove(allElements,allElementsNew, 200 * 200 * 200 * sizeof(item_node));
 }
 /**
  * Gibt die ITEM ID zurück.
@@ -487,7 +461,6 @@ item_node *getItem_Root(int x, int y, int z)
 item_node* createItem (int x, int y, int z, int id)
 {
 	item_node* selected = getItem_Root(x, y, z);
-	//printf("Passt?: %d\n", getItemID(selected) );
 	//prüfen ob Element überhaupt Gültig ist!
 	if (getItemID(selected) != 2)
 	{
@@ -503,27 +476,6 @@ item_node* createItem (int x, int y, int z, int id)
 		}
 	}
 	return selected;
-
-
-	// fängt für ein neues Element bei Movement 0 an.
-
-	//item_node* selected = &room[x][y];
-	/*if(selected == NULL)
-	{
-		printf("%s\n", "test");
-	    selected = malloc(sizeof(item_node));
-	}
-	else{
-	    while(selected->next != NULL)
-	        selected = selected->next;
-
-	    selected->next = malloc(sizeof(item_node));
-	    selected = selected->next;
-	}
-
-	selected->id = id;
-	selected->next = NULL;
-	return selected;*/
 }
 /**
  * Entfernt das ausgewählte Element
@@ -533,9 +485,6 @@ void removeItem(item_node * node) {
 	if (node->next == NULL) {
 		//letztes item: vorletztes next->NULL
 		if (node->prev == NULL) {
-			//bedeutet: er versucht den head zu löschen, dieser hat kein prev pfeil und darum geht das hier kaputt!
-			//hier ist aber nicht das problem, sondern hier taucht das problem nur in erscheinung
-			//irgendwo wird also der head als id = sound beschrieben, sodass z,b in collision dieser aufruf überhaupt erfolgen kann.
 		}
 		node->prev->next = NULL;
 	}
@@ -543,7 +492,6 @@ void removeItem(item_node * node) {
 		node->prev->next = node->next;
 		node->next->prev = node->prev;
 	}
-	//TODO: Wahrscheinlich kann man hier noch free() machen, da node dann wieder freigegeben wird.
 }
 /**
  * Fügt ein Element an eine neue Stelle (Eigenschaften bleiben erhalten), Element an der alten Position wird entfernt
@@ -556,7 +504,6 @@ void removeItem(item_node * node) {
 item_node* addItem (item_node * node, int x, int y, int z)
 {
 	item_node* selected = getItem_Root(x, y, z);
-	//item_node* selected = &room[x][y];
 	if (getItemID(selected) != 2)
 	{
 		removeItem(node);
@@ -599,8 +546,6 @@ item_node *getItem_RootNewRoom(int x, int y, int z)
 void addItemNewRoom (item_node * node, int x, int y, int z)
 {
 	item_node* selected = getItem_RootNewRoom(x, y, z);
-
-	//item_node* selected = &room[x][y];
 	if (getItemID(selected) != 2)
 	{
 		removeItem(node);
@@ -638,7 +583,6 @@ int isSoundField(int x, int y, int z)
 }
 
 void createReceipt(int (*roomtrans)[cols], int var, int x) {
-
 	if (isSoundField(x, roomtrans[var][16], roomtrans[var][17]) == 1) {
 
 		item_node *poo = createItem(x, roomtrans[var][16], roomtrans[var][17], 0);
@@ -656,7 +600,6 @@ void createReceipt(int (*roomtrans)[cols], int var, int x) {
 		setDirectionID(poo, roomtrans[var][12]);
 		setMovement(poo, roomtrans[var][13]);
 		setSideOfWave(poo, roomtrans[var][14]);
-		printf("Frq: %d und Direction: %d\n", roomtrans[var][1], roomtrans[var][12]);
 	}
 	else {
 		item_node *puh = createItem(x, roomtrans[var][16], roomtrans[var][17], 0);
@@ -674,8 +617,7 @@ void createReceipt(int (*roomtrans)[cols], int var, int x) {
 		setDirectionID(puh, getReboundID(roomtrans[var][12]));
 		setMovement(puh, roomtrans[var][13]);
 		setSideOfWave(puh, roomtrans[var][14]);
-
-		absorption(puh, x, roomtrans[var][16], roomtrans[var][17], 0.76);
+		absorption(puh, 0.76);
 	}
 }
 int* prepareArrays(item_node *node, int side) {
@@ -750,7 +692,6 @@ void saveVisualisation(int x_offset)
 						sendarray = newptr;
 					}
 
-					//sendarray[realsize] = (int *)malloc(5 * sizeof(int));
 					if (isObstacle(j, k, l)) {
 						//Hinderniss mit Value 0 markieren
 						sendarray[realcount][0] = j + x_offset;
@@ -765,7 +706,6 @@ void saveVisualisation(int x_offset)
 						int count = 0;
 						while (temp != NULL)
 						{
-							//TODO: auf Gegenstände reagieren...
 							int itemID = getItemID(temp);
 							if (itemID == 0)
 							{
@@ -793,41 +733,8 @@ void saveVisualisation(int x_offset)
 		free(sendarray);
 	}
 }
-/**
- * Wird zu Beginn aufgerufen und organisiert den Start
- */
-void startup()
-{
-	/*if (myrank == 1) {
-		//alten output.json löschen
-		remove("output");
-		//Visualisation starten
-		FILE *fp;
-		fp = fopen("output", "a");
-		fprintf(fp, "{" );
-		fclose(fp);
-	}*/
-
-}
-/**
- * Verantwortlich für das korrekte herunterfahren
- */
-void shutdown()
-{
-	/*if (myrank == 1) {
-		//Visualisation beenden
-		FILE *fp;
-		fp = fopen("output", "a");
-		fprintf(fp, "}" );
-		//printf("nenenenenene\n");
-		fclose(fp);
-	}*/
-}
-
 int main (int argc, char *argv[])
 {
-	int DebugWait = 1;
-	while (DebugWait) ;
 	double start_t, end_t, total_t;
 	MPI_Request *request;
 	MPI_Request *request_ready;
@@ -841,7 +748,7 @@ int main (int argc, char *argv[])
 		x_format = 200;
 		y_format = 200;
 		z_format = 200;
-		int setting_runs = 40;
+		int setting_runs = 100;
 		start_t = MPI_Wtime();  //Startzeit
 		printf("%s\n", "-----STARTING THE ENGINE-----" );
 		printf("X:%d & Y:%d & Z:%d\n", x_format, y_format, z_format);
@@ -921,7 +828,6 @@ int main (int argc, char *argv[])
 		for (int t = 0; t < NSimulations; ++t) {
 			MPI_Isend(&go, 1, MPI_INT, t + 2, t + 2, MPI_COMM_WORLD, &request[t]);
 		}
-		//bruchen wir vlt nicht mehr
 		MPI_Waitall(NSimulations, request, MPI_STATUSES_IGNORE);
 	} else if (myrank == 1) {
 		//alten output.json löschen
@@ -936,14 +842,12 @@ int main (int argc, char *argv[])
 		MPI_Recv(&go, 1, MPI_INT, 0, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 		while (go != 0) {
 			fprintf(fp, "\"soundarray%d\": [", run );
-			//besser mit MPI Probe?
 			for (i = 2; i < go + 2; ++i) {
 				int amount = 0;
 				MPI_Status status;
 				MPI_Probe(i, 1, MPI_COMM_WORLD, &status);
 				MPI_Get_count(&status, MPI_INT, &amount);
 				int cols = 4;
-				//int (*recv_buf)[cols] = malloc(sizeof *recv_buf * amount);
 				int (*recv_buf)[cols] = malloc(sizeof * recv_buf * amount / 4);
 				MPI_Recv(recv_buf, amount, MPI_INT, i, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 				for (int var = 0; var < amount / 4; ++var) {
@@ -967,20 +871,18 @@ int main (int argc, char *argv[])
 		int runs = mySimSetting[4];
 		int go = 0;
 		int run = 1;
-		/*int (*sendarrayleft)[cols] = malloc(sizeof * sendarrayleft * rows);
-		int (*sendarrayright)[cols] = malloc(sizeof * sendarrayright * rows);*/
 		MPI_Recv(&go, 1, MPI_INT, 0, myrank, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 		while (go) {
 			//solange durchgehen
 			createRoom();
 			//createItem(1, 1, 1, 1);
-			if (myrank == 2 && run == 1) {
+			if (myrank == 2  && run == 1) {
 				loudspeaker();
 				//createItem(10,10,20,1);
 				//createWall();
 			}
-			if (myrank == size-2 && run == 1) {
-				//door();
+			if (myrank == 4 && run == 1) {
+				door();
 			}
 			unToucheAll();
 			saveVisualisation(x_offset);
@@ -1030,7 +932,7 @@ int main (int argc, char *argv[])
 				}
 				free(recv_buf);
 
-			} else if (myrank == size - 1 && run > 1) {
+			} else if (myrank == size - 2 && run > 1) {
 				// darf nur von links empfangen
 				int amount = 0;
 				int source = myrank - 1;
@@ -1045,11 +947,11 @@ int main (int argc, char *argv[])
 				free(recv_buf);
 			}
 
-			for (int j = 0; j < x_format; ++j)
+			for (j = 0; j < x_format; ++j)
 			{
-				for (int k = 0; k < y_format; ++k)
+				for (k = 0; k < y_format; ++k)
 				{
-					for (int l = 0; l < z_format; ++l) {
+					for (l = 0; l < z_format; ++l) {
 
 						if (isObstacle(j, k, l) == false)
 						{
@@ -1130,14 +1032,8 @@ int main (int argc, char *argv[])
 											sendarrayright = newptr;
 										}
 										int *sendarrayright_new = prepareArrays(temp, 2);
-
-										/*for (int i = 0; i < cols ; i++) {
-											printf("%d Wert sendrarray right\n", sendarrayright_new[i]); // stimmt !
-										}*/
-
 										for (int var = 0; var < cols; ++var) {
 											sendarrayright[realcountright][var] = sendarrayright_new[var];
-											//printf("Date: %d\n", sendarrayright[realcountright][var]);
 										}
 										free(sendarrayright_new);
 										++realcountright;
@@ -1178,10 +1074,7 @@ int main (int argc, char *argv[])
 								else if (direction_id == 5)
 								{
 									//nächstes Feld prüfen
-									//item_node* next_item = getItem_Root(j, k - 1, l);
 									int next_itemID = getFieldID(j, k - 1, l);
-									//printf("freq: %d, runter: %d\n", getFreq10000b20000(temp) ,next_itemID );
-									//int next_itemID = getItemID(j-1,k);
 									if (next_itemID == 0 || next_itemID == 3) {
 										addItemNewRoom(temp, j, k - 1, l);
 										//room_new[j-1][k] = getSound(j,k);
@@ -1189,12 +1082,9 @@ int main (int argc, char *argv[])
 
 										//TODO: Winkel Abprall, Schalldämmung durch Hinderniss
 										//1. Sound an die Folgestelle schieben
-
-										//room_new[j][k] = getSound(j,k);
 										absorption(temp, 0.78);
 										//2. Attribut der Richtung anpassen
 										temp->data.Sound.direction_id = getReboundID(direction_id);
-										//room_new[j][k].data.Sound.direction_id = getReboundID(direction_id);
 										changeReboundSideOfWave(temp);
 										addItemNewRoom(temp, j, k, l);
 									} else if (next_itemID == 2)
@@ -1284,15 +1174,11 @@ int main (int argc, char *argv[])
 										removeItem(temp);
 									}
 								}
-								decSoundWithMovement(temp);
-								// guckt ob der Sound noch bestehen darf.
+								//decSoundWithMovement(temp);
 								checkSoundValid(temp, j, k, l);
-								//Item weitergehen
-								//MPI_TYPE_FREE(&mpi_item_node_type);
 								temp = temp->next;
 							}
 						}
-
 						if (getFieldID(j, k, l) == 0) {
 							interference(j, k, l); // nach allen verschiebungen überlappungen verrechnen.
 						}
@@ -1324,10 +1210,10 @@ int main (int argc, char *argv[])
 				MPI_Isend(sendarrayleft, realcountleft * cols, MPI_INT, desti, 14, MPI_COMM_WORLD, &reql);
 				MPI_Wait(&reql, MPI_STATUS_IGNORE);
 			}
-			//printf("TestR: %d\n", sendrowsright);
-			//printf("TestL: %d\n", sendrowsleft);
-			//free(sendarrayleft);
-			//free(sendarrayright);
+			free(sendarrayleft);
+			free(sendarrayright);
+			realcountright = 0;
+			realcountleft = 0;
 			changeRoom(room_new);
 			++run;
 			//Sync

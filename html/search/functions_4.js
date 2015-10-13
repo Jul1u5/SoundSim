@@ -17,7 +17,7 @@ var searchData=
   ['getitemid',['getItemID',['../main_8c.html#a52de69fe99722b80280b0afb342fb708',1,'getItemID(item_node *node):&#160;main.c'],['../main_8h.html#a52de69fe99722b80280b0afb342fb708',1,'getItemID(item_node *node):&#160;main.c']]],
   ['getmovement',['getMovement',['../soundwavefunction_8c.html#ab5fc8d378c483aef68f0cd2b4db31ad6',1,'getMovement(item_node *node):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#ab5fc8d378c483aef68f0cd2b4db31ad6',1,'getMovement(item_node *node):&#160;soundwavefunction.c']]],
   ['getobstacle',['getObstacle',['../main_8c.html#abf0dfee4f51743bb88bdc24f2938ffa8',1,'main.c']]],
-  ['getreboundid',['getReboundID',['../main_8c.html#abf4367fb88386f1b3d7b5512068dacc6',1,'main.c']]],
+  ['getreboundid',['getReboundID',['../main_8c.html#abf4367fb88386f1b3d7b5512068dacc6',1,'getReboundID(int currentDirectionID):&#160;main.c'],['../main_8h.html#abf4367fb88386f1b3d7b5512068dacc6',1,'getReboundID(int currentDirectionID):&#160;main.c']]],
   ['getroom',['getRoom',['../main_8c.html#af9c2abce0ffcce2e850cb3fef1bcfedd',1,'main.c']]],
   ['getsideofwave',['getSideOfWave',['../soundwavefunction_8c.html#ae5fedcb660edb7a1b06a08eabc2e3293',1,'getSideOfWave(item_node *node):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#ae5fedcb660edb7a1b06a08eabc2e3293',1,'getSideOfWave(item_node *node):&#160;soundwavefunction.c']]],
   ['getsound',['getSound',['../main_8c.html#a86b3b843fb0ebc9240e32a0fc3fb59e4',1,'main.c']]],

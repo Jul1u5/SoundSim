@@ -43,7 +43,6 @@ void setMovement(item_node *node, int m) {
  * @param newnode
  */
 void copyMovement(item_node *node, item_node *newnode) {
-    // Fällt sicherlich mit addItem Weg
     if (getItemID(node) == 0) {
         setMovement(newnode, getMovement(node));
     }
@@ -118,7 +117,7 @@ bool getTouch(item_node *node) {
  * @param node
  */
 void decSoundWithMovement(item_node *node) {
-    float faktor = 0.35;
+    float faktor = 0.12;
 
     if (getItemID(node) == 0) {
         if (getFreq20b40 > 0) {
@@ -273,7 +272,7 @@ void procedure(item_node *temp, int x , int y, int z, int side) {
  */
 void addWave(item_node * temp, int x, int y, int z)
 {
-    if (getItemID(temp) == 0)
+    if (getItemID(temp) == 0 && x + 1 < x_format)
     {
         // Wenn das Hauptteilchen noch nicht weit genug gewandert ist, bleibt die Welle ungekrümmt.
         if (getMovement(temp) < 10)

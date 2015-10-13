@@ -18,11 +18,9 @@ var searchData=
   ['setsideofwave',['setSideOfWave',['../soundwavefunction_8c.html#ab7f82602facfc90160970113fc0c7487',1,'setSideOfWave(item_node *node, int side):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#ab7f82602facfc90160970113fc0c7487',1,'setSideOfWave(item_node *node, int side):&#160;soundwavefunction.c']]],
   ['settouche',['setTouche',['../soundwavefunction_8c.html#a66014ff391a85db23aa68d59959ff637',1,'setTouche(item_node *node):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a66014ff391a85db23aa68d59959ff637',1,'setTouche(item_node *node):&#160;soundwavefunction.c']]],
   ['setwaveroot',['setWaveRoot',['../soundwavefunction_8c.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c']]],
-  ['shutdown',['shutdown',['../main_8c.html#a7861ee1569802186a619778efc85af13',1,'main.c']]],
   ['sideofwave',['sideofwave',['../structitem__node.html#a77861ad11dd6c8a8f917ced69e388e8e',1,'item_node']]],
   ['size',['size',['../main_8c.html#a439227feff9d7f55384e8780cfc2eb82',1,'main.c']]],
   ['sound',['Sound',['../structitem__node.html#ae6671661190e93efee5a39ecfade977b',1,'item_node']]],
   ['soundwavefunction_2ec',['soundwavefunction.c',['../soundwavefunction_8c.html',1,'']]],
-  ['soundwavefunction_2eh',['soundwavefunction.h',['../soundwavefunction_8h.html',1,'']]],
-  ['startup',['startup',['../main_8c.html#aecc7d8debf54990ffeaaed5bac7d7d81',1,'main.c']]]
+  ['soundwavefunction_2eh',['soundwavefunction.h',['../soundwavefunction_8h.html',1,'']]]
 ];

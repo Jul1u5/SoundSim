@@ -34,44 +34,46 @@ void absorption(item_node *temp, float coeff) {
  */
 void interference(int x, int y, int z) {
 	item_node *temp;
-	item_node *hold;
 	temp = getItem_Root(x, y, z);
 	int count = 0;
-	int max20b40, max40b100, max100b150, max150b400, max400b1000,
-	    max1000b2000, max2000b3500, max3500b6000, max6000b10000, max10000b20000 = 0;
+	int direc = 0;
+	int sid = 0;
+	int max20b40 = 0, max40b100 = 0, max100b150 = 0, max150b400 = 0, max400b1000 = 0,
+	    max1000b2000 = 0, max2000b3500 = 0, max3500b6000 = 0, max6000b10000 = 0, max10000b20000 = 0;
 	while (temp != NULL) {
 		if (getItemID(temp) == 0 && getDirectionID(temp) != 0) {
-			if (max20b40 < getFreq20b40(temp) && getFreq20b40 > 0) {
+			if (max20b40 < getFreq20b40(temp) && getFreq20b40(temp) > 0) {
 				max20b40 = getFreq20b40(temp);
-			}else max20b40 = 0;
-			if (max40b100 < getFreq40b100(temp) && getFreq40b100 > 0) {
+			} else max20b40 = 0;
+			if (max40b100 < getFreq40b100(temp) && getFreq40b100(temp) > 0) {
 				max40b100 = getFreq40b100(temp);
-				hold = temp;
-			}else max40b100 = 0;
-			if (max100b150 < getFreq100b150(temp) && getFreq100b150 > 0) {
+				direc = getDirectionID(temp);
+				sid = getSideOfWave(temp);
+			} else max40b100 = 0;
+			if (max100b150 < getFreq100b150(temp) && getFreq100b150(temp) > 0) {
 				max100b150 = getFreq100b150(temp);
-			}else max150b400 = 0;
-			if (max150b400 < getFreq150b400(temp) && getFreq150b400 > 0) {
+			} else max150b400 = 0;
+			if (max150b400 < getFreq150b400(temp) && getFreq150b400(temp) > 0) {
 				max150b400 = getFreq150b400(temp);
-			}else max150b400 = 0;
-			if (max400b1000 < getFreq400b1000(temp) && getFreq400b1000 > 0) {
+			} else max150b400 = 0;
+			if (max400b1000 < getFreq400b1000(temp) && getFreq400b1000(temp) > 0) {
 				max400b1000 = getFreq400b1000(temp);
-			}else max400b1000 = 0;
-			if (max1000b2000 < getFreq1000b2000(temp) && getFreq1000b2000 > 0) {
+			} else max400b1000 = 0;
+			if (max1000b2000 < getFreq1000b2000(temp) && getFreq1000b2000(temp) > 0) {
 				max1000b2000 = getFreq1000b2000(temp);
-			}else max1000b2000 = 0;
-			if (max2000b3500 < getFreq2000b3500(temp) && getFreq2000b3500 > 0) {
+			} else max1000b2000 = 0;
+			if (max2000b3500 < getFreq2000b3500(temp) && getFreq2000b3500(temp) > 0) {
 				max2000b3500 = getFreq2000b3500(temp);
 			} else max2000b3500 = 0;
-			if (max3500b6000 < getFreq3500b6000(temp) && getFreq3500b6000 > 0) {
+			if (max3500b6000 < getFreq3500b6000(temp) && getFreq3500b6000(temp) > 0) {
 				max3500b6000 = getFreq3500b6000(temp);
 			} else max3500b6000 = 0;
-			if (max6000b10000 < getFreq6000b10000(temp) && getFreq6000b10000 > 0) {
+			if (max6000b10000 < getFreq6000b10000(temp) && getFreq6000b10000(temp) > 0) {
 				max6000b10000 = getFreq6000b10000(temp);
-			}else max6000b10000 = 0;
-			if (max10000b20000 < getFreq10000b20000(temp) && getFreq10000b20000 > 0) {
+			} else max6000b10000 = 0;
+			if (max10000b20000 < getFreq10000b20000(temp) && getFreq10000b20000(temp) > 0) {
 				max10000b20000 = getFreq10000b20000(temp);
-			}else max10000b20000 = 0;
+			} else max10000b20000 = 0;
 			count++;
 		}
 		temp = temp->next;
@@ -79,17 +81,15 @@ void interference(int x, int y, int z) {
 	temp = getItem_Root(x, y, z);
 	while (temp != NULL) {
 		if (getItemID(temp) == 0) {
-			//removeItem(temp);
+			removeItem(temp);
 		}
 		temp = temp->next;
 	}
-
-	item_node *tempNEW;
-	tempNEW = createItem(x, y, z, 0);
-	setWaveRoot(tempNEW,hold);
-	setDirectionID(tempNEW,getDirectionID(getWaveRoot(tempNEW)));
-	setSideOfWave(tempNEW,getSideOfWave(getWaveRoot(tempNEW)));
 	if (count > 1) {
+		item_node *tempNEW;
+		tempNEW = createItem(x, y, z, 0);
+		setDirectionID(tempNEW, direc);
+		setSideOfWave(tempNEW, sid);
 		if (getItemID(tempNEW) == 0 && getDirectionID(temp) != 0) {
 			switch (count) {
 			case 2: setFreq20b40(tempNEW, max20b40 + 3);
@@ -156,36 +156,35 @@ void interference(int x, int y, int z) {
 		}
 	}
 }
-/**
- * Ungültige SoundItems werden entfernt
- * @param temp
- * @param x
- * @param y
- * @param z
- * @return Gültigkeit des Wertes
- */
-bool checkSoundValid(item_node * temp, int x, int y, int z) {
-	//TODO: x,y,z unnötig oder?
-	bool status = false;
+	/**
+	 * Ungültige SoundItems werden entfernt
+	 * @param temp
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return Gültigkeit des Wertes
+	 */
+	bool checkSoundValid(item_node * temp, int x, int y, int z) {
+		bool status = false;
 
-	if (getItemID(temp) == 0)
-	{	// Die Summe aller Freq kleiner oder gleich 0
-		int sum = getFreq20b40(temp) + getFreq40b100(temp) + getFreq100b150(temp) + getFreq150b400(temp) + getFreq400b1000(temp) + getFreq1000b2000(temp) + getFreq2000b3500(temp) + getFreq3500b6000(temp) + getFreq6000b10000(temp) + getFreq10000b20000(temp);
-		if (sum <= 0 )
-		{
-			removeItem(temp);
-			return status;
-		} else if (getDirectionID(temp) == -1)
-		{	// Err 9 Richtung.
-			removeItem(temp);
-			return status;
-		} else if (sum > 1350 )
-		{	// Summe unrealistisch hoch.
-			removeItem(temp);
-			return status;
-		} else {
-			status = true;
+		if (getItemID(temp) == 0)
+		{	// Die Summe aller Freq kleiner oder gleich 0
+			int sum = getFreq20b40(temp) + getFreq40b100(temp) + getFreq100b150(temp) + getFreq150b400(temp) + getFreq400b1000(temp) + getFreq1000b2000(temp) + getFreq2000b3500(temp) + getFreq3500b6000(temp) + getFreq6000b10000(temp) + getFreq10000b20000(temp);
+			if (sum <= 0 )
+			{
+				removeItem(temp);
+				return status;
+			} else if (getDirectionID(temp) == -1)
+			{	// Err 9 Richtung.
+				removeItem(temp);
+				return status;
+			} else if (sum > 1350 )
+			{	// Summe unrealistisch hoch.
+				removeItem(temp);
+				return status;
+			} else {
+				status = true;
+			}
 		}
+		return status;
 	}
-	return status;
-}

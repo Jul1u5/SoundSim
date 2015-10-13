@@ -43,6 +43,7 @@ typedef struct item_node{
 int getItemID(item_node *node );
 void setItemID(item_node *node, int id);
 int getFieldID(int x, int y, int z);
+int getReboundID(int currentDirectionID);
 
 
 void setFreq20b40(item_node *node, int value);

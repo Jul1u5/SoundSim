@@ -1,9 +1,0 @@
-[0] Config.pm:320> INFO - This is Biber 1.9
-[0] Config.pm:323> INFO - Logfile is 'SoundSim.blg'
-[39] biber-darwin:277> INFO - === Mon Sep 28, 2015, 12:53:30
-[39] Biber.pm:333> INFO - Reading 'SoundSim.bcf'
-[97] Biber.pm:635> INFO - Found 0 citekeys in bib section 0
-[97] Utils.pm:144> WARN - The file 'SoundSim.bcf' does not contain any citations!
-[121] bbl.pm:517> INFO - Writing 'SoundSim.bbl' with encoding 'UTF-8'
-[121] bbl.pm:606> INFO - Output to SoundSim.bbl
-[122] Biber.pm:106> INFO - WARNINGS: 1

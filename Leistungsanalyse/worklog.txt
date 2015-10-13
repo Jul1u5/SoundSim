@@ -1,9 +1,0 @@
-18 August 2015  - Segmentation Fault bei der 10 000 x 10 000 Matrix, das erstellen klappt, nur changeRoom bereitet Probleme
-	Jede alte Matrix gibt mit free ihren Speicherraum wieder frei, da es möglicherweise nicht automatisch überschrieben wird.
-
-24 August 2015
-memmv ist eine bessere alternative als room = NewRoom…
-Müssen wir freen , wenn wir doch immer wieder den Speicher von room und room_new 
-jede interation neu belegen?
-
-ab 450x450x450 meckert der Cluster des Speichers wegen.

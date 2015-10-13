@@ -17,7 +17,5 @@ var searchData=
   ['setmovement',['setMovement',['../soundwavefunction_8c.html#a0e8487e51620b033d353431473ca58a8',1,'setMovement(item_node *node, int m):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a0e8487e51620b033d353431473ca58a8',1,'setMovement(item_node *node, int m):&#160;soundwavefunction.c']]],
   ['setsideofwave',['setSideOfWave',['../soundwavefunction_8c.html#ab7f82602facfc90160970113fc0c7487',1,'setSideOfWave(item_node *node, int side):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#ab7f82602facfc90160970113fc0c7487',1,'setSideOfWave(item_node *node, int side):&#160;soundwavefunction.c']]],
   ['settouche',['setTouche',['../soundwavefunction_8c.html#a66014ff391a85db23aa68d59959ff637',1,'setTouche(item_node *node):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a66014ff391a85db23aa68d59959ff637',1,'setTouche(item_node *node):&#160;soundwavefunction.c']]],
-  ['setwaveroot',['setWaveRoot',['../soundwavefunction_8c.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c']]],
-  ['shutdown',['shutdown',['../main_8c.html#a7861ee1569802186a619778efc85af13',1,'main.c']]],
-  ['startup',['startup',['../main_8c.html#aecc7d8debf54990ffeaaed5bac7d7d81',1,'main.c']]]
+  ['setwaveroot',['setWaveRoot',['../soundwavefunction_8c.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c'],['../soundwavefunction_8h.html#a488f1ab7dfa65b29da446b74c5d01131',1,'setWaveRoot(item_node *node, item_node *rootnode):&#160;soundwavefunction.c']]]
 ];
